@@ -1,0 +1,208 @@
+fx = {
+properties = {
+property_09 = {
+name = "Texture_U_Repeat",
+type = "VARTYPE_ARRAY_FLOAT",
+value = {
+1,
+1,
+1,
+1,
+1,
+1,
+1,
+},
+},
+property_06 = {
+name = "Noise",
+type = "VARTYPE_ARRAY_FLOAT",
+value = {
+0.00500,
+0.00500,
+0.00500,
+0.00500,
+0.00500,
+0.00500,
+0.00500,
+},
+},
+property_05 = {
+name = "Length",
+type = "VARTYPE_ARRAY_FLOAT",
+value = {
+1,
+0.92500,
+0.97500,
+0.87500,
+0.95000,
+0.90000,
+1,
+},
+},
+property_08 = {
+name = "Texture_U_Offset",
+type = "VARTYPE_ARRAY_FLOAT",
+value = {
+0,
+0,
+0,
+0,
+0,
+0,
+0,
+},
+},
+property_07 = {
+name = "Segments",
+type = "VARTYPE_ARRAY_FLOAT",
+value = {
+2,
+2,
+2,
+2,
+2,
+2,
+2,
+},
+},
+property_02 = {
+name = "Blending",
+type = "VARTYPE_INT",
+value = 1,
+},
+property_01 = {
+name = "Loop",
+type = "VARTYPE_BOOL",
+value = 0,
+},
+property_04 = {
+name = "SelfIlluminated",
+type = "VARTYPE_BOOL",
+value = 0,
+},
+property_03 = {
+name = "Texture",
+type = "VARTYPE_STRING",
+value = "DATA:ART/FX/WH_STRUCTURELIGHT_RINGRED_CENTER.TGA",
+},
+property_12 = {
+name = "Arc",
+type = "VARTYPE_ARRAY_VECTOR3",
+value = {
+entry_06 = {
+0,
+0,
+0,
+},
+entry_00 = {
+0,
+0,
+0,
+},
+entry_01 = {
+0,
+0,
+0,
+},
+entry_02 = {
+0,
+0,
+0,
+},
+entry_03 = {
+0,
+0,
+0,
+},
+entry_04 = {
+0,
+0,
+0,
+},
+entry_05 = {
+0,
+0,
+0,
+},
+},
+},
+property_11 = {
+name = "Colour",
+type = "VARTYPE_ARRAY_COLOUR",
+value = {
+entry_06 = {
+0,
+0,
+0,
+0,
+},
+entry_00 = {
+255,
+255,
+255,
+255,
+},
+entry_01 = {
+255,
+255,
+255,
+255,
+},
+entry_02 = {
+255,
+255,
+255,
+255,
+},
+entry_03 = {
+255,
+255,
+255,
+255,
+},
+entry_04 = {
+255,
+255,
+255,
+255,
+},
+entry_05 = {
+126,
+126,
+126,
+125,
+},
+},
+},
+property_00 = {
+name = "Duration",
+type = "VARTYPE_FLOAT",
+value = 2,
+},
+property_10 = {
+name = "Width",
+type = "VARTYPE_ARRAY_FLOAT",
+value = {
+0.50000,
+0.42500,
+0.47500,
+0.39000,
+0.45000,
+0.40000,
+0.50000,
+},
+},
+},
+style = "STYLE_BEAM",
+frames = {
+timeStart = {
+0,
+0.15000,
+0.31000,
+0.47000,
+0.63000,
+0.82000,
+1,
+},
+},
+}
