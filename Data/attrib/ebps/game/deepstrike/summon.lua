@@ -1,0 +1,9 @@
+GameData = Inherit([[]])
+GameData["entity_blueprint_ext"] = Reference([[ebpextensions\entity_blueprint_ext.lua]])
+GameData["entity_blueprint_ext"]["animator"] = [[Environment\All\Deep_Strike]]
+GameData["sim_entity_ext"] = Reference([[ebpextensions\sim_entity_ext.lua]])
+GameData["sim_entity_ext"]["is_in_spatial_bucket"] = false
+GameData["squad_hold_ext"] = Reference([[ebpextensions\squad_hold_ext.lua]])
+GameData["squad_hold_ext"]["acceptable_type_01"] = Reference([[type_transportable\transport_chaoshorror.lua]])
+GameData["squad_hold_ext"]["show_decorator"] = false
+GameData["type_ext"] = Reference([[ebpextensions\type_ext.lua]])
