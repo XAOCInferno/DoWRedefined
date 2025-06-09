@@ -1,0 +1,43 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/Alaitoc",
+	banner_name = "eldar_race/Alaitoc",
+}
+
+UnitCustomization =
+{
+	force_name = "Alaitoc",
+
+	Eyes =  
+	{
+		b = 0,
+		g = 0,
+		r = 0,
+	},
+	Weapons =  
+	{
+		b = 15,
+		g = 15,
+		r = 15,
+	},
+	Primary =  
+	{
+		b = 170,
+		g = 70,
+		r = 50,
+	},
+	Trim =  
+	{
+		b = 205,
+		g = 110,
+		r = 83,
+	},
+	Secondary =  
+	{
+		b = 10,
+		g = 245,
+		r = 255,
+	},
+}
+

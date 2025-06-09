@@ -1,0 +1,43 @@
+LocalInfo =  
+{
+	badge_name = "ork_race/BloodAxes",
+	associated_race = "ork_race",
+	banner_name = "ork_race/BloodAxes",
+}
+UnitCustomization =  
+{
+
+	force_name = "Blood Axes",
+	Eyes =  
+	{
+		b = 5,
+		g = 5,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 160,
+		g = 160,
+		r = 160,
+	},
+	Primary =  
+	{
+		b = 67,
+		g = 87,
+		r = 109,
+	},
+	Trim =  
+	{
+		b = 170,
+		g = 170,
+		r = 170,
+	},
+	Secondary =  
+	{
+		b = 37,
+		g = 52,
+		r = 42,
+	},
+}
+
+

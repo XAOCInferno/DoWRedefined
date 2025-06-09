@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "space_marine_race/darkangels",
+	associated_race = "space_marine_race",
+	banner_name = "space_marine_race/DarkAngels",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "Dark Angels",
+	Eyes =  
+	{
+		b = 0,
+		g = 0,
+		r = 200,
+	},
+	Weapons =  
+	{
+		b = 55,
+		g = 55,
+		r = 55,
+	},
+	Primary =  
+	{
+		b = 20,
+		g = 60,
+		r = 0,
+	},
+	Trim =  
+	{
+		b = 23,
+		g = 71,
+		r = 0,
+	},
+	Secondary =  
+	{
+		b = 13,
+		g = 40,
+		r = 0,
+	},
+}
+

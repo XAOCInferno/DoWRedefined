@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/EmpororsChildren",
+	banner_name = "chaos_marine_race/EmperorsChildren",
+}
+
+UnitCustomization =
+{
+	force_name = "Emperor's Children",
+
+	Eyes =  
+	{
+		b = 154,
+		g = 154,
+		r = 154,
+	},
+	Weapons =  
+	{
+		b = 42,
+		g = 42,
+		r = 42,
+	},
+	Primary =  
+	{
+		b = 33,
+		g = 33,
+		r = 33,
+	},
+	Trim =  
+	{
+		b = 65,
+		g = 65,
+		r = 65,
+	},
+	Secondary =  
+	{
+		b = 182,
+		g = 123,
+		r = 243,
+	},
+}

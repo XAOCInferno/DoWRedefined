@@ -1,0 +1,43 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/Saim_Hann",
+	banner_name = "eldar_race/Saim_Hann",
+}
+
+UnitCustomization =
+{
+	force_name = "Saim-Hann",
+
+	Eyes =  
+	{
+		b = 2,
+		g = 125,
+		r = 15,
+	},
+	Weapons =  
+	{
+		b = 32,
+		g = 32,
+		r = 32,
+	},
+	Primary =  
+	{
+		b = 7,
+		g = 30,
+		r = 157,
+	},
+	Trim =  
+	{
+		b = 0,
+		g = 13,
+		r = 74,
+	},
+	Secondary =  
+	{
+		b = 192,
+		g = 209,
+		r = 221,
+	},
+}
+

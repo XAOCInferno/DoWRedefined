@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/NightLords",
+	banner_name = "chaos_marine_race/NightLords",
+}
+
+UnitCustomization =
+{
+	force_name = "Night Lords",
+
+	Eyes =  
+	{
+		b = 54,
+		g = 125,
+		r = 250,
+	},
+	Weapons =  
+	{
+		b = 100,
+		g = 100,
+		r = 100,
+	},
+	Primary =  
+	{
+		b = 68,
+		g = 26,
+		r = 24,
+	},
+	Trim =  
+	{
+		b = 47,
+		g = 135,
+		r = 183,
+	},
+	Secondary =  
+	{
+		b = 68,
+		g = 26,
+		r = 24,
+	},
+}

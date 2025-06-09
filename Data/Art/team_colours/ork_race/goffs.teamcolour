@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "ork_race",
+	badge_name = "ork_race/Coffs",
+	banner_name = "ork_race/Coffs",
+}
+
+UnitCustomization =
+{
+	force_name = "Goffs",
+
+	Eyes =  
+	{
+		b = 255,
+		g = 255,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 218,
+		g = 218,
+		r = 218,
+	},
+	Primary =  
+	{
+		b = 90,
+		g = 97,
+		r = 103,
+	},
+	Trim =  
+	{
+		b = 118,
+		g = 118,
+		r = 119,
+	},
+	Secondary =  
+	{
+		b = 33,
+		g = 35,
+		r = 39,
+	},
+}

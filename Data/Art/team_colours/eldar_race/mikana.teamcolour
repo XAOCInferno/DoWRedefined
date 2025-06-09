@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/NewCraft01",
+	banner_name = "eldar_race/NewCraft01",
+}
+
+UnitCustomization =
+{
+	force_name = "Menaan",
+
+	Eyes =  
+	{
+		b = 164,
+		g = 246,
+		r = 225,
+	},
+	Weapons =  
+	{
+		b = 0,
+		g = 96,
+		r = 157,
+	},
+	Primary =  
+	{
+		b = 95,
+		g = 118,
+		r = 141,
+	},
+	Trim =  
+	{
+		b = 1,
+		g = 4,
+		r = 68,
+	},
+	Secondary =  
+	{
+		b = 21,
+		g = 138,
+		r = 227,
+	},
+}

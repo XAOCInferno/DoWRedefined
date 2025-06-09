@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	badge_name = "ork_race/DeathSkulls",
+	associated_race = "ork_race",
+	banner_name = "ork_race/DeathSkulls",
+}
+
+UnitCustomization =
+{
+	force_name = "Deathskulls",
+
+	Eyes =  
+	{
+		b = 4,
+		g = 25,
+		r = 125,
+	},
+	Weapons =  
+	{
+		b = 65,
+		g = 61,
+		r = 57,
+	},
+	Primary =  
+	{
+		b = 144,
+		g = 137,
+		r = 131,
+	},
+	Trim =  
+	{
+		b = 154,
+		g = 75,
+		r = 47,
+	},
+	Secondary =  
+	{
+		b = 77,
+		g = 70,
+		r = 59,
+	},
+}

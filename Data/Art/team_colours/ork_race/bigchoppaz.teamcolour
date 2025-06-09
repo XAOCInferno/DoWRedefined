@@ -1,0 +1,41 @@
+LocalInfo =  
+{
+	badge_name = "ork_race/BigChoppaz",
+	associated_race = "ork_race",
+	banner_name = "ork_race/BigChoppaz",
+}
+UnitCustomization =  
+{
+	force_name = "Big Choppaz",
+	Eyes =  
+	{
+		b = 118,
+		g = 158,
+		r = 195,
+	},
+	Weapons =  
+	{
+		b = 25,
+		g = 21,
+		r = 33,
+	},
+	Primary =  
+	{
+		b = 227,
+		g = 227,
+		r = 227,
+	},
+	Trim =  
+	{
+		b = 62,
+		g = 33,
+		r = 97,
+	},
+	Secondary =  
+	{
+		b = 52,
+		g = 51,
+		r = 51,
+	},
+}
+

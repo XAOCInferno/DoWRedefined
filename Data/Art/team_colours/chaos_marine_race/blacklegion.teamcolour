@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/BlackLegion",
+	banner_name = "chaos_marine_race/BlackLegion",
+}
+
+UnitCustomization =
+{
+	force_name = "Black Legion",
+
+	Eyes =  
+	{
+		b = 30,
+		g = 0,
+		r = 200,
+	},
+	Weapons =  
+	{
+		b = 100,
+		g = 100,
+		r = 100,
+	},
+	Primary =  
+	{
+		b = 42,
+		g = 42,
+		r = 42,
+	},
+	Trim =  
+	{
+		b = 69,
+		g = 155,
+		r = 208,
+	},
+	Secondary =  
+	{
+		b = 42,
+		g = 42,
+		r = 42,
+	},
+}

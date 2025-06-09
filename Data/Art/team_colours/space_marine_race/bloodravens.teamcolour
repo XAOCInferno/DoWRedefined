@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "space_marine_race",
+	badge_name = "space_marine_race/bloodravens",
+	banner_name = "space_marine_race/BloodRavens",
+}
+
+UnitCustomization =
+{
+	force_name = "Blood Ravens",
+
+	Eyes =  
+	{
+		b = 3,
+		g = 3,
+		r = 3,
+	},
+	Weapons =  
+	{
+		b = 42,
+		g = 42,
+		r = 42,
+	},
+	Primary =  
+	{
+		b = 0,
+		g = 20,
+		r = 110,
+	},
+	Trim =  
+	{
+		b = 42,
+		g = 42,
+		r = 55,
+	},
+	Secondary =  
+	{
+		b = 97,
+		g = 134,
+		r = 160,
+	},
+}

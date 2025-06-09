@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "space_marine_race/spacewolves",
+	associated_race = "space_marine_race",
+	banner_name = "space_marine_race/SpaceWolves",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "Space Wolves",
+	Eyes =  
+	{
+		b = 15,
+		g = 15,
+		r = 15,
+	},
+	Weapons =  
+	{
+		b = 65,
+		g = 42,
+		r = 0,
+	},
+	Primary =  
+	{
+		b = 160,
+		g = 146,
+		r = 111,
+	},
+	Trim =  
+	{
+		b = 202,
+		g = 182,
+		r = 139,
+	},
+	Secondary =  
+	{
+		b = 0,
+		g = 190,
+		r = 255,
+	},
+}
+

@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "eldar_race/NewCraft02",
+	associated_race = "eldar_race",
+	banner_name = "eldar_race/NewCraft02",
+}
+UnitCustomization =  
+{
+
+	force_name = "Il-Kaithe",
+	Eyes =  
+	{
+		b = 255,
+		g = 250,
+		r = 210,
+	},
+	Weapons =  
+	{
+		b = 65,
+		g = 0,
+		r = 35,
+	},
+	Primary =  
+	{
+		b = 49,
+		g = 62,
+		r = 56,
+	},
+	Trim =  
+	{
+		b = 94,
+		g = 119,
+		r = 28,
+	},
+	Secondary =  
+	{
+		b = 245,
+		g = 160,
+		r = 4,
+	},
+}
+

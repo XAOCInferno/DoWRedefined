@@ -1,0 +1,41 @@
+LocalInfo =  
+{
+	badge_name = "space_marine_race/ravenguard",
+	associated_race = "space_marine_race",
+	banner_name = "space_marine_race/RavenGuard",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "Raven Guard",
+	Eyes =  
+	{
+		b = 255,
+		g = 255,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 20,
+		g = 20,
+		r = 20,
+	},
+	Primary =  
+	{
+		b = 26,
+		g = 26,
+		r = 26,
+	},
+	Trim =  
+	{
+		b = 64,
+		g = 64,
+		r = 64,
+	},
+	Secondary =  
+	{
+		b = 46,
+		g = 46,
+		r = 46,
+	},
+}

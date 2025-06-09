@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "space_marine_race/whitescars",
+	associated_race = "space_marine_race",
+	banner_name = "space_marine_race/WhiteScars",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "White Scars",
+	Eyes =  
+	{
+		b = 0,
+		g = 60,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 0,
+		g = 60,
+		r = 255,
+	},
+	Primary =  
+	{
+		b = 250,
+		g = 240,
+		r = 230,
+	},
+	Trim =  
+	{
+		b = 255,
+		g = 255,
+		r = 255,
+	},
+	Secondary =  
+	{
+		b = 220,
+		g = 210,
+		r = 200,
+	},
+}
+

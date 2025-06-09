@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/Nurgle",
+	banner_name = "chaos_marine_race/Nurgle",
+}
+
+UnitCustomization =
+{
+	force_name = "Death Guard",
+
+	Eyes =  
+	{
+		b = 74,
+		g = 15,
+		r = 15,
+	},
+	Weapons =  
+	{
+		b = 62,
+		g = 84,
+		r = 211,
+	},
+	Primary =  
+	{
+		b = 108,
+		g = 132,
+		r = 120,
+	},
+	Trim =  
+	{
+		b = 183,
+		g = 183,
+		r = 183,
+	},
+	Secondary =  
+	{
+		b = 108,
+		g = 132,
+		r = 120,
+	},
+}

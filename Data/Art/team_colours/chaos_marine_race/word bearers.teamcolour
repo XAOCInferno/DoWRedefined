@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/WordBearers",
+	banner_name = "chaos_marine_race/WordBearers",
+}
+
+UnitCustomization =
+{
+	force_name = "Word Bearers",
+
+	Eyes =  
+	{
+		b = 2,
+		g = 132,
+		r = 84,
+	},
+	Weapons =  
+	{
+		b = 157,
+		g = 157,
+		r = 157,
+	},
+	Primary =  
+	{
+		b = 28,
+		g = 26,
+		r = 122,
+	},
+	Trim =  
+	{
+		b = 208,
+		g = 208,
+		r = 208,
+	},
+	Secondary =  
+	{
+		b = 28,
+		g = 26,
+		r = 122,
+	},
+}

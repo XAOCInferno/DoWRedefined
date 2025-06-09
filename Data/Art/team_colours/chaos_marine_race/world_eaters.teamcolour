@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/WorldEaters",
+	banner_name = "chaos_marine_race/WorldEaters",
+}
+
+UnitCustomization =
+{
+	force_name = "World Eaters",
+
+	Eyes =  
+	{
+		b = 16,
+		g = 148,
+		r = 58,
+	},
+	Weapons =  
+	{
+		b = 116,
+		g = 67,
+		r = 34,
+	},
+	Primary =  
+	{
+		b = 10,
+		g = 0,
+		r = 170,
+	},
+	Trim =  
+	{
+		b = 47,
+		g = 173,
+		r = 202,
+	},
+	Secondary =  
+	{
+		b = 10,
+		g = 0,
+		r = 170,
+	},
+}

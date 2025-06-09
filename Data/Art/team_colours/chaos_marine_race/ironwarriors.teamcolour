@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/IronWarriors",
+	banner_name = "chaos_marine_race/IronWarriors",
+}
+
+UnitCustomization =
+{
+	force_name = "Iron Warriors",
+
+Eyes =  
+	{
+		b = 27,
+		g = 176,
+		r = 205,
+	},
+	Weapons =  
+	{
+		b = 68,
+		g = 150,
+		r = 205,
+	},
+	Primary =  
+	{
+		b = 141,
+		g = 141,
+		r = 141,
+	},
+	Trim =  
+	{
+		b = 55,
+		g = 160,
+		r = 202,
+	},
+	Secondary =  
+	{
+		b = 58,
+		g = 58,
+		r = 58,
+	},
+}

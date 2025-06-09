@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "ork_race",
+	badge_name = "ork_race/BadMoons",
+	banner_name = "ork_race/BadMoons",
+}
+
+UnitCustomization =
+{
+	force_name = "Bad Moons",
+
+	Eyes =  
+	{
+		b = 0,
+		g = 25,
+		r = 215,
+	},
+	Weapons =  
+	{
+		b = 0,
+		g = 205,
+		r = 253,
+	},
+	Primary =  
+	{
+		b = 0,
+		g = 190,
+		r = 255,
+	},
+	Trim =  
+	{
+		b = 68,
+		g = 84,
+		r = 90,
+	},
+	Secondary =  
+	{
+		b = 36,
+		g = 48,
+		r = 55,
+	},
+}

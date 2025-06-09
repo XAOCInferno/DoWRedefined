@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "ork_race/EvilSunz",
+	associated_race = "ork_race",
+	banner_name = "ork_race/EvilSunz",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "Evil Sunz",
+	Eyes =  
+	{
+		b = 0,
+		g = 225,
+		r = 250,
+	},
+	Weapons =  
+	{
+		b = 1,
+		g = 1,
+		r = 253,
+	},
+	Primary =  
+	{
+		b = 1,
+		g = 1,
+		r = 215,
+	},
+	Trim =  
+	{
+		b = 37,
+		g = 154,
+		r = 218,
+	},
+	Secondary =  
+	{
+		b = 52,
+		g = 59,
+		r = 68,
+	},
+}
+

@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "ork_race/Gold_Toofs",
+	associated_race = "ork_race",
+	banner_name = "ork_race/Gold_Toofs",
+}
+UnitCustomization =  
+{
+
+	force_name = "Gold Toofs",
+	Eyes =  
+	{
+		b = 1,
+		g = 105,
+		r = 253,
+	},
+	Weapons =  
+	{
+		b = 0,
+		g = 3,
+		r = 116,
+	},
+	Primary =  
+	{
+		b = 53,
+		g = 58,
+		r = 62,
+	},
+	Trim =  
+	{
+		b = 1,
+		g = 183,
+		r = 246,
+	},
+	Secondary =  
+	{
+		b = 221,
+		g = 236,
+		r = 243,
+	},
+}
+

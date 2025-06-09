@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/NewCraft03",
+	banner_name = "eldar_race/NewCraft03",
+}
+
+UnitCustomization =
+{
+	force_name = "Ava-Nile",
+
+	Eyes =  
+	{
+		b = 96,
+		g = 240,
+		r = 250,
+	},
+	Weapons =  
+	{
+		b = 54,
+		g = 71,
+		r = 61,
+	},
+	Primary =  
+	{
+		b = 130,
+		g = 167,
+		r = 20,
+	},
+	Trim =  
+	{
+		b = 89,
+		g = 100,
+		r = 65,
+	},
+	Secondary =  
+	{
+		b = 77,
+		g = 77,
+		r = 77,
+	},
+}

@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "ork_race",
+	badge_name = "ork_race/Snakebites",
+	banner_name = "ork_race/Snakebites",
+}
+
+UnitCustomization =
+{
+	force_name = "Snakebites",
+
+	Eyes =  
+	{
+		b = 128,
+		g = 215,
+		r = 166,
+	},
+	Weapons =  
+	{
+		b = 82,
+		g = 230,
+		r = 97,
+	},
+	Primary =  
+	{
+		b = 49,
+		g = 87,
+		r = 77,
+	},
+	Trim =  
+	{
+		b = 123,
+		g = 145,
+		r = 160,
+	},
+	Secondary =  
+	{
+		b = 169,
+		g = 210,
+		r = 224,
+	},
+}

@@ -1,0 +1,42 @@
+LocalInfo =  
+{
+	badge_name = "space_marine_race/ultramarines",
+	associated_race = "space_marine_race",
+	banner_name = "space_marine_race/UltraMarine",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "Ultramarines",
+	Eyes =  
+	{
+		b = 255,
+		g = 255,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 0,
+		g = 30,
+		r = 245,
+	},
+	Primary =  
+	{
+		b = 157,
+		g = 83,
+		r = 46,
+	},
+	Trim =  
+	{
+		b = 40,
+		g = 180,
+		r = 255,
+	},
+	Secondary =  
+	{
+		b = 157,
+		g = 83,
+		r = 46,
+	},
+}
+

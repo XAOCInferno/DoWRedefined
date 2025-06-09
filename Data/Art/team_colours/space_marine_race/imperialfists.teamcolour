@@ -1,0 +1,41 @@
+LocalInfo =  
+{
+	badge_name = "space_marine_race/imperialfists",
+	associated_race = "space_marine_race",
+	banner_name = "space_marine_race/ImperialFists",
+}
+UnitCustomization =  
+{
+	pattern_name = "default",
+	force_name = "Imperial Fists",
+	Eyes =  
+	{
+		b = 10,
+		g = 10,
+		r = 10,
+	},
+	Weapons =  
+	{
+		b = 55,
+		g = 55,
+		r = 55,
+	},
+	Primary =  
+	{
+		b = 0,
+		g = 200,
+		r = 255,
+	},
+	Trim =  
+	{
+		b = 0,
+		g = 0,
+		r = 200,
+	},
+	Secondary =  
+	{
+		b = 0,
+		g = 200,
+		r = 255,
+	},
+}

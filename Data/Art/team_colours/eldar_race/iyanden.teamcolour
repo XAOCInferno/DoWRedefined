@@ -1,0 +1,43 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/Iyanden",
+	banner_name = "eldar_race/Iyanden",
+}
+
+UnitCustomization =
+{
+	force_name = "Iyanden",
+
+	Eyes =  
+	{
+		b = 0,
+		g = 0,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 46,
+		g = 46,
+		r = 46,
+	},
+	Primary =  
+	{
+		b = 16,
+		g = 178,
+		r = 234,
+	},
+	Trim =  
+	{
+		b = 29,
+		g = 94,
+		r = 189,
+	},
+	Secondary =  
+	{
+		b = 140,
+		g = 55,
+		r = 0,
+	},
+}
+

@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/Biel_Tan",
+	banner_name = "eldar_race/Biel_Tan",
+}
+
+UnitCustomization =
+{
+	force_name = "Biel-Tan",
+
+	Eyes =  
+	{
+		b = 0,
+		g = 0,
+		r = 255,
+	},
+	Weapons =  
+	{
+		b = 49,
+		g = 49,
+		r = 49,
+	},
+	Primary =  
+	{
+		b = 224,
+		g = 224,
+		r = 224,
+	},
+	Trim =  
+	{
+		b = 156,
+		g = 162,
+		r = 167,
+	},
+	Secondary =  
+	{
+		b = 0,
+		g = 103,
+		r = 50,
+	},
+}

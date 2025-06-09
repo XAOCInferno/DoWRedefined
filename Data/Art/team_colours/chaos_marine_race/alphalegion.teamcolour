@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "chaos_marine_race",
+	badge_name = "chaos_marine_race/AlphaLegion",
+	banner_name = "chaos_marine_race/AlphaLegion",
+}
+
+UnitCustomization =
+{
+	force_name = "Alpha Legion",
+
+	Eyes =  
+	{
+		b = 47,
+		g = 26,
+		r = 128,
+	},
+	Weapons =  
+	{
+		b = 125,
+		g = 125,
+		r = 125,
+	},
+	Primary =  
+	{
+		b = 46,
+		g = 31,
+		r = 0,
+	},
+	Trim =  
+	{
+		b = 189,
+		g = 189,
+		r = 189,
+	},
+	Secondary =  
+	{
+		b = 116,
+		g = 70,
+		r = 2,
+	},
+}

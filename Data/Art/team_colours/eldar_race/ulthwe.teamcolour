@@ -1,0 +1,42 @@
+LocalInfo =
+{
+	associated_race = "eldar_race",
+	badge_name = "eldar_race/Ulthwe",
+	banner_name = "eldar_race/Ulthwe",
+}
+
+UnitCustomization =
+{
+	force_name = "Ulthwe",
+
+	Eyes =  
+	{
+		b = 0,
+		g = 0,
+		r = 140,
+	},
+	Weapons =  
+	{
+		b = 171,
+		g = 216,
+		r = 246,
+	},
+	Primary =  
+	{
+		b = 1,
+		g = 1,
+		r = 1,
+	},
+	Trim =  
+	{
+		b = 1,
+		g = 1,
+		r = 1,
+	},
+	Secondary =  
+	{
+		b = 171,
+		g = 216,
+		r = 246,
+	},
+}
