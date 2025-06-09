@@ -1,0 +1,95 @@
+class 'LeaderTactic' (InfantryTactic)
+
+LeaderTactic.PosAbilities = 
+{
+	{ nil, "marines_orbital_bombardment",	Ability.Filters.CloseEnemy, 6 },
+	{ nil, "eldar_psychic_storm", 					Ability.Filters.CloseInfantryEnemy, 4 },
+	{ nil, "eldar_eldritchstorm", 					Ability.Filters.CloseEnemy, 4 },
+}
+
+LeaderTactic.TargetAbilities = 
+{
+	{ nil, "ork_tank_zappa", 						Ability.Filters.CloseVehicleEnemy, 1 },
+	{ nil, "ork_superstick_bomb", 				Ability.Filters.CloseVehicleEnemy, 1 },
+	{ nil, "eldar_mind_war", 						Ability.Filters.CloseCommanderEnemy, 1 },
+	{ nil, "eldar_guide", 								Ability.Filters.CloseInCombat, 1 },
+}
+
+
+function LeaderTactic:__init( squad_ai ) super( squad_ai )
+
+	if LeaderTactic.PosAbilities[1][1] == nil then
+		for i in LeaderTactic.PosAbilities do
+			local ability_id = cpu_manager.stats:GetAbilityID( LeaderTactic.PosAbilities[i][2] )
+			LeaderTactic.PosAbilities[i][1] = ability_id
+		end
+	end
+
+	if LeaderTactic.TargetAbilities[1][1] == nil then
+		for i in LeaderTactic.TargetAbilities do
+			local ability_id = cpu_manager.stats:GetAbilityID( LeaderTactic.TargetAbilities[i][2] )
+			LeaderTactic.TargetAbilities[i][1] = ability_id
+		end
+	end
+end
+
+
+function LeaderTactic:GetName()
+	return "Leader Tactic"
+end
+
+
+function LeaderTactic:DoAbilities()
+
+	if self.squad_ai:IsInCombat() then
+		if self.squad_ai:CanPossess() then
+			self.squad_ai:DoPossess()
+		end
+	end
+
+	for i in LeaderTactic.PosAbilities do
+
+		local ability_id = LeaderTactic.PosAbilities[i][1]
+		if ability_id ~= nil then
+
+			local filter = LeaderTactic.PosAbilities[i][3]
+			local squad_count = LeaderTactic.PosAbilities[i][4]
+			Ability.DoAbilityPos( self.squad_ai, ability_id, filter, squad_count ) 
+		end
+	end
+
+	for i in LeaderTactic.TargetAbilities do
+
+		local ability_id = LeaderTactic.TargetAbilities[i][1]
+		if ability_id ~= nil then
+
+			local filter = LeaderTactic.TargetAbilities[i][3]
+			local squad_count = LeaderTactic.TargetAbilities[i][4]
+			Ability.DoAbilityTarget( self.squad_ai, ability_id, filter, squad_count ) 
+		end
+	end
+end
+
+
+function LeaderTactic:IsAttacker()
+	-- assassinate win condition -- never attack
+	return not cpu_manager.assassinate
+end
+
+
+function LeaderTactic:Update()
+
+	if self:IsComplete() then
+		return
+	end
+
+	if cpu_manager.assassinate then
+		self:TryAttachAssassinateSquad( false )
+	else
+		if not InfantryTactic.Update( self ) then
+			return
+		end
+	
+		self:TryAttachSquadMelee()
+	end
+end

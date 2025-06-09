@@ -1,0 +1,189 @@
+class 'EldarBuildBaseStrategy' (BuildBaseStrategy)
+
+
+EldarBuildBaseStrategy.ResearchOrder =
+{
+	{ 1, 	"eldar_research_infantryhealth_1" },
+	{ 1, 	"eldar_research_infantryaccuracy_1" },
+	{ 1, 	"eldar_farseer_ability_research_3" },
+	{ 1, 	"eldar_plasma_grenade_research" },
+
+	{ 2, 	"eldar_requisition_research_1" },
+	{ 2, 	"eldar_power_research_1" },
+	{ 2, 	"eldar_research_infantryhealth_2" },
+	{ 2, 	"eldar_research_infantryaccuracy_2" },
+	{ 2, 	"eldar_haywire_bomb_research" },
+
+	{ 3, 	"eldar_requisition_research_2" },
+	{ 3, 	"eldar_power_research_2" },
+	{ 3, 	"eldar_research_farseerhealth_1" },
+	{ 3, 	"eldar_research_farseerhealth_2" },
+}
+
+
+function EldarBuildBaseStrategy:__init( baseinfo ) super( baseinfo )
+
+	-- Limit tactics
+	self.spend_now_req = 250
+	self.spend_later_req = 500
+
+	self.generator_name = "eldar_warp_generator"
+	self.bigger_generator_id = cpu_manager.stats:GetBuildingID( "eldar_advanced_warp_generator" )
+
+	self.vehicle_building_name = "eldar_support_portal"
+	self.vehicle_building_id = cpu_manager.stats:GetBuildingID( self.vehicle_building_name )
+	
+	self.infantry_building_name = "eldar_aspect_portal"
+	self.infantry_building_id = cpu_manager.stats:GetBuildingID( self.infantry_building_name )
+
+	self.post_addon_id = cpu_manager.stats:GetAddOnID( "eldar_list_post_addon_1" )
+	
+	self.tier1_building_id = cpu_manager.stats:GetBuildingID( "eldar_soul_shrine" )
+	self.tier2_research_name = "eldar_tier2_research"
+
+	self.avatar_name = "eldar_squad_avatar"
+	self.avatar_id = cpu_manager.stats:GetSquadID( self.avatar_name )
+end
+
+
+function EldarBuildBaseStrategy:EvaluateSquadCap()
+
+	local tierLevel = self:GetTierLevel()
+	if tierLevel >=2 then
+
+		-- evalulate support cap first at T2 and above
+		if	build_manager:GetSupportCapCurrentMax() < build_manager:GetSupportCapTotalMax() and
+			build_manager:GetSupportCapLeft() <= self.support_cap_threshold then
+
+			-- build more support cap
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Building
+			build_type.name = "eldar_webway_gate"
+			self:TryBuild( build_type )
+		end
+	end
+
+	if	build_manager:GetSquadCapCurrentMax() < build_manager:GetSquadCapTotalMax() and
+		build_manager:GetSquadCapLeft() <= self.squad_cap_threshold then
+
+		-- build more squad cap
+		local build_type = CpuBuildType()
+		build_type.btype = CpuPrerequisites.BT_Building
+		build_type.name = "eldar_webway_gate"
+		self:TryBuild( build_type )
+	end
+end
+
+
+function EldarBuildBaseStrategy:DoSecondaryBuildings()
+
+	local tierLevel = self:GetTierLevel()
+	if tierLevel >=2 then
+	
+		local num_vehicle_buildings = 0
+		local num_infantry_buildings = 0
+	
+		for build_channel in build_manager:GetBuildChannelAIs() do
+	
+			if build_channel:GetBlueprintID() == self.vehicle_building_id then
+				num_vehicle_buildings = num_vehicle_buildings + 1
+			end
+		
+			if build_channel:GetBlueprintID() == self.infantry_building_id then
+				num_infantry_buildings = num_infantry_buildings + 1
+			end
+		end
+
+		-- build secondary vehicles?
+		if	num_vehicle_buildings < 2 and
+			resource_manager:GetResourceAmount():Get( ResourceAmount.RT_Requisition ) > 1000 then
+
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Building
+			build_type.name = self.vehicle_building_name
+			self:TryBuild( build_type )
+
+		-- build secondary infantry after secondary vehicles
+		elseif num_barracks == 1 and
+			resource_manager:GetResourceAmount():Get( ResourceAmount.RT_Requisition ) > 1000 then
+
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Building
+			build_type.name = self.infantry_building_name
+			self:TryBuild( build_type )
+		end
+	end
+end
+
+
+function EldarBuildBaseStrategy:DoResearch()
+
+	local tierLevel = self:GetTierLevel()
+
+	for i in EldarBuildBaseStrategy.ResearchOrder do 
+		
+		if not cpu_manager.cpu_player:IsResearchComplete( EldarBuildBaseStrategy.ResearchOrder[i][2] ) then
+		
+			if tierLevel > EldarBuildBaseStrategy.ResearchOrder[i][1] then
+				-- do not research this yet!
+				break
+
+			else
+			
+				local id = cpu_manager.stats:GetResearchID( EldarBuildBaseStrategy.ResearchOrder[i][2] )
+				if self:PlanExists( "Build Research Plan", id ) == false then 
+					aitrace( "wanting to do research" )
+					self.AddPlan( self, BuildResearchPlan( id ) )
+				end
+			
+				-- Only research 1 item at a time
+				break
+			end
+		end
+	end
+
+end
+
+
+function EldarBuildBaseStrategy:DoBuildUnits()
+
+	local tierLevel = self:GetTierLevel()
+	if tierLevel == 3 then
+		if	build_manager:CanBuildSquad( self.avatar_id ) then
+			
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Squad
+			build_type.name = self.avatar_name
+			self:TryBuild( build_type )
+		end
+	end
+
+	BuildBaseStrategy.DoBuildUnits( self )
+end
+
+
+function EldarBuildBaseStrategy:GetTierLevel() 
+
+	if cpu_manager.cpu_player:IsResearchComplete( self.tier2_research_name ) then
+		return 3;
+	end
+
+	for build_channel in build_manager:GetBuildChannelAIs() do
+
+		if build_channel:GetBlueprintID() == self.tier1_building_id then
+			return 2
+		end
+	end
+
+	return 1
+end
+
+
+function EldarBuildBaseStrategy:BuildStructureAddons()
+
+	local id = self.post_addon_id
+	if( self:PlanExists("Build AddOn Plan", id) == false ) then 
+		self.AddPlan( self, BuildAddOnPlan( id ) )
+	end
+end
+

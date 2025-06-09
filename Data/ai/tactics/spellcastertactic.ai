@@ -1,0 +1,98 @@
+class 'SpellCasterTactic' (InfantryTactic)
+
+SpellCasterTactic.SpecialAbilities = 
+{
+	{ nil, "marines_word_of_emperer", 		Ability.Filters.IsInCombat },
+	{ nil, "ork_power_of_waagh", 				Ability.Filters.IsInCombat },
+}
+
+SpellCasterTactic.PosAbilities = 
+{
+	{ nil, "marines_smite", 							Ability.Filters.CloseEnemy, 4 },
+	{ nil, "chaos_corruption",						Ability.Filters.CloseEnemy, 6 },
+}
+
+SpellCasterTactic.TargetAbilities = 
+{
+	{ nil, "chaos_chains_of_torment", 			Ability.Filters.CloseEnemy, 4 },
+	{ nil, "chaos_doombolt", 						Ability.Filters.CloseEnemy, 4 },
+}
+
+
+function SpellCasterTactic:__init( squad_ai ) super( squad_ai )
+
+	if SpellCasterTactic.SpecialAbilities[1][1] == nil then
+		for i in SpellCasterTactic.SpecialAbilities do
+			local ability_id = cpu_manager.stats:GetAbilityID( SpellCasterTactic.SpecialAbilities[i][2] )
+			SpellCasterTactic.SpecialAbilities[i][1] = ability_id
+		end
+	end
+
+	if SpellCasterTactic.PosAbilities[1][1] == nil then
+		for i in SpellCasterTactic.PosAbilities do
+			local ability_id = cpu_manager.stats:GetAbilityID( SpellCasterTactic.PosAbilities[i][2] )
+			SpellCasterTactic.PosAbilities[i][1] = ability_id
+		end
+	end
+
+	if SpellCasterTactic.TargetAbilities[1][1] == nil then
+		for i in SpellCasterTactic.TargetAbilities do
+			local ability_id = cpu_manager.stats:GetAbilityID( SpellCasterTactic.TargetAbilities[i][2] )
+			SpellCasterTactic.TargetAbilities[i][1] = ability_id
+		end
+	end
+end
+
+
+function SpellCasterTactic:GetName()
+	return "Spell Caster Tactic"
+end
+
+
+function SpellCasterTactic:DoAbilities()
+
+	if self.squad_ai:IsInCombat() then
+		if self.squad_ai:CanPossess() then
+			self.squad_ai:DoPossess()
+		end
+	end
+
+	for i in SpellCasterTactic.SpecialAbilities do
+		local ability_id = SpellCasterTactic.SpecialAbilities[i][1]
+		if ability_id ~= nil then
+			local filter = SpellCasterTactic.SpecialAbilities[i][3]
+			Ability.DoAbility( self.squad_ai, ability_id, filter ) 
+		end
+	end
+
+	for i in SpellCasterTactic.PosAbilities do
+		local ability_id = SpellCasterTactic.PosAbilities[i][1]
+		if ability_id ~= nil and self.squad_ai:CanDoAbility( ability_id ) then
+
+			local filter = SpellCasterTactic.PosAbilities[i][3]
+			local squad_count = SpellCasterTactic.PosAbilities[i][4]
+			Ability.DoAbilityPos( self.squad_ai, ability_id, filter, squad_count ) 
+		end
+	end
+
+	for i in SpellCasterTactic.TargetAbilities do
+		local ability_id = SpellCasterTactic.TargetAbilities[i][1]
+		if ability_id ~= nil then
+
+			local filter = SpellCasterTactic.TargetAbilities[i][3]
+			local squad_count = SpellCasterTactic.TargetAbilities[i][4]
+			Ability.DoAbilityTarget( self.squad_ai, ability_id, filter, squad_count ) 
+		end
+	end
+
+end
+
+
+function SpellCasterTactic:Update()
+
+	if not InfantryTactic.Update( self ) then
+		return
+	end
+
+	self:TryAttachSquadMelee()
+end

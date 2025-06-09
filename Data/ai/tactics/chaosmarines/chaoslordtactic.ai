@@ -1,0 +1,32 @@
+class 'ChaosLordTactic' (InfantryTactic)
+
+function ChaosLordTactic:__init( squad_ai ) super( squad_ai )
+end
+
+
+function ChaosLordTactic:GetName()
+	return "Chaos Lord Tactic"
+end
+
+
+function ChaosLordTactic:IsAttacker()
+	
+	--assassinate win condition -- never attack
+	return not cpu_manager.assassinate
+end
+
+
+function ChaosLordTactic:Update()
+
+	if self:IsComplete() then
+		return
+	end
+
+	if cpu_manager.assassinate then
+		self:TryAttachAssassinateSquad( false )
+	else
+		-- experiment with attaching to squads
+		self:TryAttachSquad( true, true )
+	end
+
+end

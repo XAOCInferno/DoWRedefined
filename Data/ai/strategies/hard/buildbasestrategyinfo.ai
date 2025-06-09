@@ -1,0 +1,84 @@
+--HARD
+BuildBaseStrategyInfo = 
+{
+	eldar_race =
+	{
+		max_army_percentage = 0.9,
+		
+		resource_capturers = 2,
+		engineer_count = 3,
+		
+		attack_rating = 100,
+		max_army_size = 3500,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				eldar_squad_bonesinger = 0,
+			}
+		},
+	},
+	
+	chaos_marine_race =
+	{
+		max_army_percentage = 0.9,
+		
+		resource_capturers = 2,
+		engineer_count = 3,
+
+		attack_rating = 200,
+		max_army_size = 3500,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				chaos_squad_slave = 0,
+				chaos_squad_cultist = 2,
+				chaos_squad_rhino = 0,
+			}
+		},
+	},
+
+	ork_race =
+	{
+		max_army_percentage = 0.9,
+		
+		resource_capturers = 2,
+		engineer_count = 3,
+		
+		attack_rating = 300,
+		max_army_size = 3500,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				ork_squad_grot = 0,
+			}
+		},
+	},
+	
+	space_marine_race =
+	{
+		max_army_percentage = 0.9,
+		
+		resource_capturers = 2,
+		engineer_count = 3,
+		
+		attack_rating = 100,
+		max_army_size = 3500,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				space_marine_squad_servitor = 0,
+				space_marine_squad_rhino = 0,
+				space_marine_squad_scout = 2,
+				space_marine_squad_skull_probe = 0,
+			}
+		},
+	}
+}

@@ -1,0 +1,1040 @@
+function GenerateUnitEffectiveness( 	light_low, light_med, light_high, 
+																	heavy_med, heavy_high, 
+																	vehicle_low, vehicle_med, vehicle_high, 
+																	monster_med, monster_high, 
+																	commander )
+	effectiveness = {}
+	
+	effectiveness[ UnitStatsAI.UC_LightInfantryLow ] 		= light_low
+	effectiveness[ UnitStatsAI.UC_LightInfantryMed ] 		= light_med
+	effectiveness[ UnitStatsAI.UC_LightInfantryHigh ] 	= light_high
+	effectiveness[ UnitStatsAI.UC_HeavyInfantryMed ] 		= heavy_med
+	effectiveness[ UnitStatsAI.UC_HeavyInfantryHigh ] 	= heavy_high
+	effectiveness[ UnitStatsAI.UC_VehicleLow ] 					= vehicle_low
+	effectiveness[ UnitStatsAI.UC_VehicleMed ] 					= vehicle_med
+	effectiveness[ UnitStatsAI.UC_VehicleHigh ] 				= vehicle_high
+	effectiveness[ UnitStatsAI.UC_MonsterMed ] 					= monster_med
+	effectiveness[ UnitStatsAI.UC_MonsterHigh ] 				= monster_high
+	effectiveness[ UnitStatsAI.UC_Commander ] 					= commander
+
+	return effectiveness
+end
+
+UnitStats =
+{
+	{
+		race = "space_marine_race",
+		{
+			name = "Scout",
+			sbp_name = "space_marine_squad_scout",
+			ebp_name = "scout_marine",
+			class = UnitStatsAI.UC_LightInfantryMed,
+			rating = 2,
+			potential = 
+			{
+				{
+					name = "space_marine_bolt_pistol_scout",
+					effectiveness = GenerateUnitEffectiveness(7,5,4.67,3,1.94805,0.5,0.25,0,0.824250558,0,1.65),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_flamer_scout",
+					effectiveness = GenerateUnitEffectiveness(1.8,1.29,1.03,0.77,0.64935,0.5,0.25,0,0.29,0,0.43),
+					range = UnitStatsAI.RT_ShortRanged,
+				},
+				{
+					name = "space_marine_sniper_rifle",
+					effectiveness = GenerateUnitEffectiveness(3.03,4.68,5.2,2.17,3.038958,1,0.5,0,2.48,0,0.43),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_plasma_gun_scout",
+					effectiveness = GenerateUnitEffectiveness(7.96,6.82,4.55,9.09,9.376614,5.07,1.4,0,10,0,10),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Marine",
+			sbp_name = "space_marine_squad_tactical",
+			ebp_name = "space_marine_tactical_bolter",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "space_marine_bolter_tactical",
+					effectiveness = GenerateUnitEffectiveness(7,5,4.67,4,5.506488,2.23,1,0,4.44,6.99828806,6.62),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_flamer_tactical",
+					effectiveness = GenerateUnitEffectiveness(1.91,1.36,1.09,1.09,1.129869,0.61,0.3,0,0.6,6.99828806,1.8),
+					range = UnitStatsAI.RT_ShortRanged,
+				},
+				{
+					name = "space_marine_heavy_bolter_tactical",
+					effectiveness = GenerateUnitEffectiveness(10,10,8.73,4.36,4.506489,4.87,1.35,0,4.85,6.99828806,7.22),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_plasma_gun",
+					effectiveness = GenerateUnitEffectiveness(7.64,5.45,4.36,8.73,8.999991,4.87,1.35,1.181061,9.7,1.27374699,10),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_missile_launcher_tactical",
+					effectiveness = GenerateUnitEffectiveness(1.09,0.55,4.36,0.57,0.324675,10,7.41,9.43755225,0.65,8.91622893,0.78),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Terminator",
+			sbp_name = "space_marine_squad_terminator",
+			ebp_name = "terminator",
+			class = UnitStatsAI.UC_HeavyInfantryHigh,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "space_marine_storm_bolter",
+					effectiveness = GenerateUnitEffectiveness(6.12,3.78,2.64,3.78,4.324671,5.62,2.33,2.72300175,4.2,2.94279477,4.17),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_heavy_flamer",
+					effectiveness = GenerateUnitEffectiveness(1.25,1.29,0.89,1.07,1.233765,1.6,0.66,0.77643825,1.59,0.83452389,1.18),
+					range = UnitStatsAI.RT_ShortRanged,
+				},
+				{
+					name = "space_marine_assault_cannon_terminator",
+					effectiveness = GenerateUnitEffectiveness(8.77,7.52,6.26,5.37,6.155838,7.999,3.31,3.8712555,5.96,4.17261945,5.89),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Assault Terminator",
+			sbp_name = "space_marine_squad_terminator_assault",
+			ebp_name = "terminator_assault",
+			class = UnitStatsAI.UC_HeavyInfantryHigh,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "space_marine_thunder_hammer",
+					effectiveness = GenerateUnitEffectiveness(8.5,7.85,7.63,7.19,6.23,10,4.84,5.66,8.72,6.1,8.65),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Assault Marine",
+			sbp_name = "space_marine_squad_assault",
+			ebp_name = "assault_marine",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "space_marine_chainsword_assault",
+					effectiveness = GenerateUnitEffectiveness(10,7.22,6.73,5.77,4.09,3.22,1.59,0,6.41,0,9.54),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Land Speeder",
+			sbp_name = "space_marine_squad_land_speeder",
+			ebp_name = "land_speeder",
+			class = UnitStatsAI.UC_VehicleLow,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "space_marine_assault_cannon_landspeeder",
+					effectiveness = GenerateUnitEffectiveness(2.68,2.68,2.35,2.17,2.99,5.4,2.27,2.68,3.01,3.62,1.92),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Dreadnought",
+			sbp_name = "space_marine_squad_dreadnought",
+			ebp_name = "dreadnought",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "space_marine_dreadnought_fist",
+					effectiveness = GenerateUnitEffectiveness(10,4.65,4.86,4.74,4.47,10,10,10,5.42,10,8.89),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Dreadnought Hellfire",
+			sbp_name = "space_marine_squad_dreadnought_hellfire",
+			ebp_name = "dreadnought_hellfire_variant",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "space_marine_assault_cannon_hellfire",
+					effectiveness = GenerateUnitEffectiveness(2.28,1.52,1.52,0.76,0.441558,4.32,1.63,1.487262,0.87,1.59584393,1),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_lascannon_twin_hellfire",
+					effectiveness = GenerateUnitEffectiveness(1.77,1.21,1.21,0.61,0.350649,4.31,1.63,0.743631,1.62,0.79060158,0.79),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Predator",
+			sbp_name = "space_marine_squad_predator",
+			ebp_name = "predator",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 9,
+			potential = 
+			{
+				{
+					name = "space_marine_autocannon",
+					effectiveness = GenerateUnitEffectiveness(1.38,0.92,0.8,0.64,0.883116,3.07,1.7,3.96967725,0.71,1.43479546,2.3),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "space_marine_lascannon_twin_predator",
+					effectiveness = GenerateUnitEffectiveness(1.38,0.92,0.8,0.64,0.88,8.37,3.74,6.6708075,0.71,2.40108628,2.3),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Whirlwind",
+			sbp_name = "space_marine_squad_whirlwind",
+			ebp_name = "whirlwind",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 9,
+			potential = 
+			{
+				{
+					name = "space_marine_missile_battery",
+					effectiveness = GenerateUnitEffectiveness(0.39,0.21,0.23,0.19,0.272727,2.16,1.19,3.3463395,0.22,3.61627019,0.48),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Land Raider",
+			sbp_name = "space_marine_squad_land_raider",
+			ebp_name = "land_raider",
+			class = UnitStatsAI.UC_VehicleHigh,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "space_marine_heavy_bolter_twin",
+					effectiveness = GenerateUnitEffectiveness(2.58,3.61,4.22,0.97,1.324674,3.08,1.7,3.3463395,1.07,3.61627019,1.14),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Force Commander",
+			sbp_name = "space_marine_squad_force_commander",
+			ebp_name = "force_commander",
+			class = UnitStatsAI.UC_Commander,
+			rating = 5,
+			potential = 
+			{
+				{
+					name = "space_marine_daemon_hammer",
+					effectiveness = GenerateUnitEffectiveness(6.35,7.26,7.41,7.26,6.72,10,4.48,10,9.07,10,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Librarian",
+			sbp_name = "space_marine_squad_librarian",
+			ebp_name = "librarian",
+			class = UnitStatsAI.UC_Commander,
+			rating = 5,
+			potential = 
+			{
+				{
+					name = "space_marine_force_weapon",
+					effectiveness = GenerateUnitEffectiveness(4.48,5.11,5.22,5.11,4.74,7.13,3.16,9.6890745,6.39,10,7.4),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Apothecary",
+			sbp_name = "space_marine_squad_apothecary",
+			ebp_name = "apothecary",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 1,
+			potential = 
+			{
+				{
+					name = "space_marine_chainsword_apothecary",
+					effectiveness = GenerateUnitEffectiveness(5,3.3333,2.92,2.5,2.65,2,1,0,2.78,0,6.3),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Servitor",
+			sbp_name = "space_marine_squad_servitor",
+			ebp_name = "servitor",
+			class = UnitStatsAI.UC_LightInfantryLow,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "none",
+					effectiveness = GenerateUnitEffectiveness(0,0,0,0,0,0,0,0,0,0,0),
+					range = UnitStatsAI.RT_None,
+				},
+			}
+		},
+	},
+	{
+		race = "chaos_marine_race",
+		{
+			name = "Cultist Squad",
+			sbp_name = "chaos_squad_cultist",
+			ebp_name = "chaos_cultist",
+			class = UnitStatsAI.UC_LightInfantryMed,
+			rating = 2,
+			potential = 
+			{
+				{
+					name = "chaos_knife_cultist",
+					effectiveness = GenerateUnitEffectiveness(8.75,6.25,5.84,3.75,1.5,1,0.5,0,0.68,0,2.06),
+					range = UnitStatsAI.RT_Melee,
+				},
+				{
+					name = "chaos_grenade_launcher",
+					effectiveness = GenerateUnitEffectiveness(10,10,9.4,5.22,3.623373,2.08,0.79,0,3.48,0,1.04),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "chaos_plasma_gun_cultist",
+					effectiveness = GenerateUnitEffectiveness(8,5.71428,4.5714,6.857143,7.077915,1.99,0.71,0,2.54,0,3.78),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Chaos Marine Squad",
+			sbp_name = "chaos_marine_squad",
+			ebp_name = "chaos_marine_bolter",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "chaos_bolter_tactical",
+					effectiveness = GenerateUnitEffectiveness(7,5,4.671,4,5.506488,2.23,1,0,4.45,0,6.6),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "chaos_flamer_tactical",
+					effectiveness = GenerateUnitEffectiveness(1.909,1.3636,1.0909,1.0909,1.129869,0.4,0.25,0,1.21,0,1.8),
+					range = UnitStatsAI.RT_ShortRanged,
+				},
+				{
+					name = "chaos_heavy_bolter_tactical",
+					effectiveness = GenerateUnitEffectiveness(10,10,8.7272,4.3636,6.75038286,4.8977,1.7907,0,7.27325496,0,7.216964),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "chaos_plasma_gun_tactical",
+					effectiveness = GenerateUnitEffectiveness(7.636,5.4545,4.3636,8.7272,8.999991,4.87,1.35,1.181061,9.7,1.27374699,10),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "chaos_missile_launcher_tactical",
+					effectiveness = GenerateUnitEffectiveness(1.0909,0.5454,4.3636,0.568182,0.324675,10,7.5,9.43755225,0.65,10,0.7818),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Raptors",
+			sbp_name = "chaos_squad_raptor",
+			ebp_name = "chaos_raptor",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "chaos_chainsword_raptor",
+					effectiveness = GenerateUnitEffectiveness(10,7.37,6.88,5.9,4.18,3.28,1.5,0,6.55,0,9.75),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Obliterators",
+			sbp_name = "chaos_squad_obliterator",
+			ebp_name = "chaos_obliterator",
+			class = UnitStatsAI.UC_HeavyInfantryHigh,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "chaos_obliterator_group_test",
+					effectiveness = GenerateUnitEffectiveness(5.73,5.29,5.15,4.85,3.441555,7.86,3.26,3.82,5.88,4.37,5.83),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Horrors",
+			sbp_name = "chaos_squad_horror",
+			ebp_name = "chaos_horror",
+			class = UnitStatsAI.UC_MonsterMed,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "chaos_daemon_fire",
+					effectiveness = GenerateUnitEffectiveness(6.3,6.3,6.3,5.4,6.181812,6.02,2.22,1.9465635,5,8.40380198,7.44),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Possessed Chaos Marines",
+			sbp_name = "chaos_squad_possessed_marine",
+			ebp_name = "chaos_possessed_marine",
+			class = UnitStatsAI.UC_MonsterMed,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "chaos_possessed_melee",
+					effectiveness = GenerateUnitEffectiveness(10,6.08,5.25,4,3.78,10,4.59,7.57847475,4.57,8.16954966,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Defiler",
+			sbp_name = "chaos_squad_defiler",
+			ebp_name = "chaos_defiler",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "chaos_battlecannon",
+					effectiveness = GenerateUnitEffectiveness(2.64,0.56,0.54,3.69,5.532462,10,7.67,10,4.11,8.27203505,4.37),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Chaos Predator",
+			sbp_name = "chaos_squad_predator",
+			ebp_name = "chaos_predator",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 9,
+			potential = 
+			{
+				{
+					name = "chaos_autocannon",
+					effectiveness = GenerateUnitEffectiveness(0.32,1.81,1.5797,0.902715,0.870129,4.028442,1.67,3.90406275,1,1.42015469,1.492929),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "chaos_lascannon_twin_predator",
+					effectiveness = GenerateUnitEffectiveness(0.32,1.81,1.5797,0.902715,0.870129,8.14,3.64,6.48489975,1,2.32788243,1.492929),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Chaos Lord",
+			sbp_name = "chaos_squad_lord",
+			ebp_name = "chaos_lord",
+			class = UnitStatsAI.UC_Commander,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "chaos_manreaper",
+					effectiveness = GenerateUnitEffectiveness(7.38,8.43,8.61,8.43,7.8,10,5.21,10,10,10,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Sorcerer",
+			sbp_name = "chaos_squad_sorcerer",
+			ebp_name = "chaos_sorcerer",
+			class = UnitStatsAI.UC_Commander,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "chaos_bedlam_staff",
+					effectiveness = GenerateUnitEffectiveness(8.74,9.98,10,9.98,9.24,10,6.17,10,10,10,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Bloodthirster",
+			sbp_name = "chaos_squad_bloodthirster",
+			ebp_name = "chaos_bloodthirster",
+			class = UnitStatsAI.UC_MonsterHigh,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "chaos_bloodthirster_melee",
+					effectiveness = GenerateUnitEffectiveness(2.93,2.93,3.42,2.93,3.1,8.72,4.83,10,3.26,10,3.29),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Heretic",
+			sbp_name = "chaos_squad_slave",
+			ebp_name = "chaos_slave",
+			class = UnitStatsAI.UC_LightInfantryLow,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "none",
+					effectiveness = GenerateUnitEffectiveness(0,0,0,0,0,0,0,0,0,0,0),
+					range = UnitStatsAI.RT_None,
+				},
+			}
+		},
+	},
+	{
+		race = "ork_race",
+		{
+			name = "Grot Squad",
+			sbp_name = "ork_squad_grot",
+			ebp_name = "ork_grot",
+			class = UnitStatsAI.UC_LightInfantryLow,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "ork_grot_knife",
+					effectiveness = GenerateUnitEffectiveness(0,0.3,0.34,0.28,0,0,0,0,0.32,0,0),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Slugga Boyz Squad",
+			sbp_name = "ork_squad_slugga",
+			ebp_name = "ork_slugga_boy",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 3,
+			potential = 
+			{
+				{
+					name = "ork_choppa_boyz_slugga",
+					effectiveness = GenerateUnitEffectiveness(10,8.75,7.5,7.5,6.62,5.58,2.5,0,8.33,0,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+				{
+					name = "ork_burna_slugga",
+					effectiveness = GenerateUnitEffectiveness(8,7,6,8,7,2,1,0,8,5,7),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Shoota Boyz Squad",
+			sbp_name = "ork_squad_shoota_boy",
+			ebp_name = "ork_shoota_boy",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "ork_shoota_shoota",
+					effectiveness = GenerateUnitEffectiveness(6,4,3,3,2.753244,2.23,1,0,3.33,0,4.96),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "ork_burna_shoota",
+					effectiveness = GenerateUnitEffectiveness(1.96,1.4,1.12,1.12,1.155843,0.62,0.25,0,1.24,0,1.85),
+					range = UnitStatsAI.RT_ShortRanged,
+				},
+				{
+					name = "ork_big_shoota_shoota",
+					effectiveness = GenerateUnitEffectiveness(10,10,8.96,4.48,4.623372,5,1.38,0,4.98,0,7.41),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "ork_rokkit_launcha_shoota",
+					effectiveness = GenerateUnitEffectiveness(1.12,0.55,8.96,0.89,0.324675,10,7.61,9.6890745,0.66,10,0.8),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Stormboyz",
+			sbp_name = "ork_squad_stormboy",
+			ebp_name = "ork_stormboy",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 5,
+			potential = 
+			{
+				{
+					name = "ork_choppa_boyz_stormboyz",
+					effectiveness = GenerateUnitEffectiveness(10,7.5,7.01,6,4.25,3.34,1.65,0,6.67,0,9.93),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Tankbustas",
+			sbp_name = "ork_squad_tankbusta",
+			ebp_name = "ork_tankbusta",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 5,
+			potential = 
+			{
+				{
+					name = "ork_stikkbomb",
+					effectiveness = GenerateUnitEffectiveness(10,4.69,4.05,2.41,1.74,6.28,2.95,6.82,2.2,7.35,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+				{
+					name = "ork_rokkit_launcha_tankbusta",
+					effectiveness = GenerateUnitEffectiveness(1.2,0.59,4.05,0.63,0.350649,10,8.15,10,0.71,10,0.86),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Nobz Squad",
+			sbp_name = "ork_squad_nob",
+			ebp_name = "ork_nob",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 7,
+			potential = 
+			{
+				{
+					name = "ork_choppa_nob",
+					effectiveness = GenerateUnitEffectiveness(9.38,7.81,6.25,6.25,5.21,6.21,2.35,0,7.29,0,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+				{
+					name = "ork_power_claw_nobz",
+					effectiveness = GenerateUnitEffectiveness(10,10,9.86,9.86,8.22,9.8,3.71,4.0462275,10,4.33366792,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Big Mek",
+			sbp_name = "ork_squad_mek_boy",
+			ebp_name = "ork_mek_boy",
+			class = UnitStatsAI.UC_Commander,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "ork_power_claw_mekboy",
+					effectiveness = GenerateUnitEffectiveness(8.81,10,10,10,9.32,10,6.21,10,10,10,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Bad Dok",
+			sbp_name = "ork_squad_bad_dok",
+			ebp_name = "ork_bad_dok",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "ork_injector",
+					effectiveness = GenerateUnitEffectiveness(7.5,6.25,5,5,4.58,4.97,2.5,0,4.17,0,5),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Nob Leader",
+			sbp_name = "",
+			ebp_name = "ork_nob_leader",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "ork_nob_shoota",
+					effectiveness = GenerateUnitEffectiveness(9.38,7.81,6.25,6.25,5.21,6.21,2.35,0,7.29,0,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+				{
+					name = "ork_power_claw_nobz",
+					effectiveness = GenerateUnitEffectiveness(10,9.7625,7.8125,7.8125,6.5125,7.7625,2.9375,0,9.1125,0,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Warboss",
+			sbp_name = "ork_squad_warboss",
+			ebp_name = "ork_warboss",
+			class = UnitStatsAI.UC_Commander,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "ork_power_claw_boss",
+					effectiveness = GenerateUnitEffectiveness(5.82,6.65,6.79,6.66,6.16,9.28,4.1,10,8.32,10,9.63),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Killa Kan",
+			sbp_name = "ork_squad_killa_kan",
+			ebp_name = "ork_killa_kan",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 7,
+			potential = 
+			{
+				{
+					name = "ork_kan_buzza_saw",
+					effectiveness = GenerateUnitEffectiveness(9.1,4.1,4.28,4.16,3.92,10,10,10,4.76,10,7.82),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Wartrak",
+			sbp_name = "ork_squad_wartrak",
+			ebp_name = "ork_wartrak",
+			class = UnitStatsAI.UC_VehicleLow,
+			rating = 7,
+			potential = 
+			{
+				{
+					name = "ork_big_shoota_twin",
+					effectiveness = GenerateUnitEffectiveness(4.51,3.83,3.22,3.87,4.428567,8.22,2.42,3.980613,4.3,4.30438638,7.24),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "ork_rokkit_launcher_twin_wartrak",
+					effectiveness = GenerateUnitEffectiveness(3.87,3.32,2.76,3.32,3.805191,9.86,4.09,4.77892275,3.68,5.15355104,3.66),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "ork_bomb_chucka_wartrack",
+					effectiveness = GenerateUnitEffectiveness(5.67,4.96,4.26,4.96,5.532462,8.06,3.05,2.76674475,4.73,2.97207631,4.05),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Wartrukk",
+			sbp_name = "ork_squad_trukk",
+			ebp_name = "ork_trukk",
+			class = UnitStatsAI.UC_VehicleLow,
+			rating = 7,
+			potential = 
+			{
+				{
+					name = "ork_big_shoota_trukk",
+					effectiveness = GenerateUnitEffectiveness(4.51,3.83,3.22,3.87,4.428567,8.22,2.42,3.980613,4.3,4.30438638,7.24),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Looted Tank",
+			sbp_name = "ork_squad_looted_tank",
+			ebp_name = "ork_looted_tank",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 9,
+			potential = 
+			{
+				{
+					name = "ork_battlecannon",
+					effectiveness = GenerateUnitEffectiveness(1.990826,1.317798,1.155963,0.674312,0.450374874,4.29882,1.189199,2.799552,0.733945,4.497644544,0.788991),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Squiggoth",
+			sbp_name = "ork_squad_squiggoth",
+			ebp_name = "ork_squiggoth",
+			class = UnitStatsAI.UC_VehicleHigh,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "ork_zzzap_gun",
+					effectiveness = GenerateUnitEffectiveness(4.22,3.19,3.04,2.2,1.92,10,4.14,10,2.41,10,2.91),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+	},
+	{
+		race = "eldar_race",
+		{
+			name = "Bonesinger",
+			sbp_name = "eldar_squad_bonesinger",
+			ebp_name = "eldar_bonesinger",
+			class = UnitStatsAI.UC_LightInfantryLow,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "eldar_sword_bonesinger",
+					effectiveness = GenerateUnitEffectiveness(4,3,2,1,0,0,0,0,1,0,1),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Guardian Squad",
+			sbp_name = "eldar_guardian_squad",
+			ebp_name = "eldar_guardian",
+			class = UnitStatsAI.UC_LightInfantryMed,
+			rating = 3,
+			potential = 
+			{
+				{
+					name = "eldar_shuriken_catapult_guardian",
+					effectiveness = GenerateUnitEffectiveness(6.86,5.87,4.9,3.92,1.5,1,0.5,0,2.17,0,6.49),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Avatar",
+			sbp_name = "eldar_squad_avatar",
+			ebp_name = "eldar_avatar",
+			class = UnitStatsAI.UC_MonsterHigh,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "eldar_wailing_doom",
+					effectiveness = GenerateUnitEffectiveness(2.76,2.57,2.29,2.86,2.73,7.66,3.77,5.3,2.86,6.27,1.31),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Howling Banshees Squad",
+			sbp_name = "eldar_squad_banshees",
+			ebp_name = "eldar_banshees",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "eldar_power_sword_banshee",
+					effectiveness = GenerateUnitEffectiveness(10,8.53,7.31,7.31,3.96,2.43,0.92,0,4.07,7.1739773,6.08),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Dark Reapers Squad",
+			sbp_name = "eldar_squad_dark_reapers",
+			ebp_name = "eldar_dark_reapers",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 4,
+			potential = 
+			{
+				{
+					name = "eldar_reaper_launcher",
+					effectiveness = GenerateUnitEffectiveness(3.77,1.39,1.09,6.41,8.467524,2.15,1.2,0,6.9,0,5.19),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Falcon Grav Tank",
+			sbp_name = "eldar_squad_falcon_grav_tank",
+			ebp_name = "eldar_falcon_grav_tank",
+			class = UnitStatsAI.UC_VehicleLow,
+			rating = 7,
+			potential = 
+			{
+				{
+					name = "eldar_shuriken_catapult_grav_tank",
+					effectiveness = GenerateUnitEffectiveness(3.8,3.02,3.01,2.27,3.220776,5.97,2.26,2.7339375,3.34,2.928154,2.01),
+					range = UnitStatsAI.RT_Ranged,
+				},
+				{
+					name = "eldar_starcannon_grav_tank",
+					effectiveness = GenerateUnitEffectiveness(3.8,3.02,3.01,2.27,3.220776,9.63,3.92,4.42,4.89,7.99,2.66),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Farseer",
+			sbp_name = "eldar_squad_farseer",
+			ebp_name = "eldar_farseer",
+			class = UnitStatsAI.UC_Commander,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "eldar_witchblade_farseer",
+					effectiveness = GenerateUnitEffectiveness(4.6,3.68,2.76,3.68,2.92,4.1,2.27,2.00124225,3.06,4.28974561,10),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Fire Prism",
+			sbp_name = "eldar_squad_fire_prism",
+			ebp_name = "eldar_fire_prism",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 10,
+			potential = 
+			{
+				{
+					name = "eldar_prism_cannon",
+					effectiveness = GenerateUnitEffectiveness(3.6,2.89,2.16,2.19,1.16883,3.85,2.19,2.65738725,1.44,7.11541422,0.91),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Grav Platform",
+			sbp_name = "eldar_squad_grav_platform",
+			ebp_name = "eldar_grav_platform",
+			class = UnitStatsAI.UC_HeavyInfantryHigh,
+			rating = 2,
+			potential = 
+			{
+				{
+					name = "eldar_shuriken_cannon_grav_platform",
+					effectiveness = GenerateUnitEffectiveness(9.8875,7.75,6.6375,5.525,3.7986975,1.475,0.625,0,3.95,2.159513575,2.8375),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Grav Platform Brightlance",
+			sbp_name = "eldar_squad_grav_platform_brightlance",
+			ebp_name = "eldar_grav_platform_brightlance",
+			class = UnitStatsAI.UC_HeavyInfantryHigh,
+			rating = 6,
+			potential = 
+			{
+				{
+					name = "eldar_brightlance_grav_platform",
+					effectiveness = GenerateUnitEffectiveness(2.5,1.69,0.75,1.63,0.701298,10,6.75,10,2.11,6.16376417,1.51),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Rangers Squad",
+			sbp_name = "eldar_squad_rangers",
+			ebp_name = "eldar_rangers",
+			class = UnitStatsAI.UC_LightInfantryHigh,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "eldar_long_rifle",
+					effectiveness = GenerateUnitEffectiveness(1.4325,3.5925,2.8725,2.16,1.97727075,0.75,0.375,0,2.3925,0,2.37),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Seer Council",
+			sbp_name = "eldar_squad_seer_council",
+			ebp_name = "eldar_warlock_seer",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "eldar_power_sword_seer_council",
+					effectiveness = GenerateUnitEffectiveness(5.19,4.62,4.04,3.46,3.08,6.31,2.82,6.11308425,4.5,8.06706427,3.38),
+					range = UnitStatsAI.RT_Melee,
+				},
+				{
+					name = "eldar_witchblade_seer_council",
+					effectiveness = GenerateUnitEffectiveness(9.9,8.8,7.7,6.6,5.87,10,5.38,9.02,4.4,9.66,4.95),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+		{
+			name = "Vyper",
+			sbp_name = "eldar_squad_vypers",
+			ebp_name = "eldar_vypers",
+			class = UnitStatsAI.UC_VehicleLow,
+			rating = 0,
+			potential = 
+			{
+				{
+					name = "eldar_shuriken_cannon_vyper",
+					effectiveness = GenerateUnitEffectiveness(3.75,3.78,2.78,3.75,3.155841,1.24,0.95,0,3.34,1.84473702,2.37),
+					range = UnitStatsAI.RT_Ranged,
+				},
+			}
+		},
+		{
+			name = "Warp Spider Squad",
+			sbp_name = "eldar_squad_warp_spider",
+			ebp_name = "eldar_warp_spider",
+			class = UnitStatsAI.UC_HeavyInfantryMed,
+			rating = 8,
+			potential = 
+			{
+				{
+					name = "eldar_deathspinner",
+					effectiveness = GenerateUnitEffectiveness(10,10,9.76,1.91,1.675323,1.91,0.72,0,2.19,1.37623238,3.29),
+					range = UnitStatsAI.RT_ShortRanged,
+				},
+			}
+		},
+		{
+			name = "Wraithlord",
+			sbp_name = "eldar_squad_wraithlord",
+			ebp_name = "eldar_wraithlord",
+			class = UnitStatsAI.UC_VehicleMed,
+			rating = 7,
+			potential = 
+			{
+				{
+					name = "eldar_wraithlord_close_combat",
+					effectiveness = GenerateUnitEffectiveness(8.91,4.455,4.95,5.94,3.3,10,10,10,6.6,10,6.675),
+					range = UnitStatsAI.RT_Melee,
+				},
+			}
+		},
+	},
+	{
+		race = "npc_race",
+	}
+}

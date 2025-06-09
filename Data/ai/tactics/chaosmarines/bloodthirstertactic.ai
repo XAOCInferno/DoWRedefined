@@ -1,0 +1,16 @@
+class 'BloodThirsterTactic' (InfantryTactic)
+
+function BloodThirsterTactic:__init( squad_ai ) super( squad_ai )
+end
+
+
+function BloodThirsterTactic:GetName()
+	return "BloodThirster Tactic"
+end
+
+
+function BloodThirsterTactic:AlwaysAttack()
+	return true
+end
+
+

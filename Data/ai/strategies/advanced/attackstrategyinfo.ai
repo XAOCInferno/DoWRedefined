@@ -1,0 +1,33 @@
+--ADVANCED
+AttackStrategyInfo = 
+{
+
+	eldar_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -200,
+		min_units = 2,
+	},
+	
+	chaos_marine_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -200,
+		min_units = 2,
+	},
+	
+	ork_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -200,
+		min_units = 2,
+	},
+	
+	space_marine_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -200,
+		min_units = 2,
+	},
+	
+}

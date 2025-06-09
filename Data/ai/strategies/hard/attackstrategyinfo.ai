@@ -1,0 +1,45 @@
+--HARD
+AttackStrategyInfo = 
+{
+
+	eldar_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -100,
+		min_units = 1,
+
+		--if you have this amount of army, attack anyway
+		max_army_size = 1500,
+	},
+	
+	chaos_marine_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -100,
+		min_units = 1,
+		
+		--if you have this amount of army, attack anyway
+		max_army_size = 1500,
+	},
+	
+	ork_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -100,
+		min_units = 1,
+
+		--if you have this amount of army, attack anyway
+		max_army_size = 1500,
+	},
+	
+	space_marine_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -100,
+		min_units = 1,
+
+		--if you have this amount of army, attack anyway
+		max_army_size = 1500,
+	},
+	
+}

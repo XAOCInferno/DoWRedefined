@@ -1,0 +1,186 @@
+class 'MarineBuildBaseStrategy' (BuildBaseStrategy)
+
+
+MarineBuildBaseStrategy.ResearchOrder =
+{
+	{ 1, 	"marine_max_weapons_research" },
+	{ 1, 	"marine_accuracy_upgrade_research" },
+	{ 1, 	"marine_health_upgrade_research" },
+	{ 1, 	"marine_frag_grenade_research" },
+
+	{ 2, 	"marine_requisition_research_1" },
+	{ 2, 	"marine_power_research_1" },
+	{ 2, 	"marine_melta_bomb_research" },
+	{ 2, 	"marine_accuracy_upgrade_research_2" },
+	{ 2, 	"marine_health_upgrade_research_2" },
+
+	{ 3, 	"marine_requisition_research_2" },
+	{ 3, 	"marine_power_research_2" },
+	{ 3, 	"marine_health_upgrade_research" },
+	{ 3, 	"marine_health_upgrade_research_2" },
+}
+
+
+function MarineBuildBaseStrategy:__init( baseinfo ) super( baseinfo )
+
+	-- Limit tactics
+	self.spend_now_req = 250
+	self.spend_later_req = 500
+
+	self.generator_name = "space_marine_generator"
+	self.bigger_generator_id = cpu_manager.stats:GetBuildingID( "space_marine_thermo_generator" )
+	
+	self.vehicle_building_name = "space_marine_vehicle_building"
+	self.vehicle_building_id = cpu_manager.stats:GetBuildingID( self.vehicle_building_name )
+	
+	self.infantry_building_name = "space_marine_barracks"
+	self.infantry_building_id = cpu_manager.stats:GetBuildingID( self.infantry_building_name )
+	
+	self.post_addon_id = cpu_manager.stats:GetAddOnID( "space_marine_list_post_addon_1" )
+	
+	self.tier1_addon_id = cpu_manager.stats:GetAddOnID( "space_marine_hq_addon_1" )
+	self.tier2_addon_id = cpu_manager.stats:GetAddOnID( "space_marine_hq_addon_2" )
+end
+
+
+function MarineBuildBaseStrategy:EvaluateSquadCap()
+
+	local tierLevel = self:GetTierLevel()
+	if tierLevel >=2 then
+
+		-- evalulate support cap first at T2 and above
+		if build_manager:GetSupportCapCurrentMax() < build_manager:GetSupportCapTotalMax() and
+			build_manager:GetSupportCapLeft() <= self.support_cap_threshold then
+
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Research
+		
+			if not cpu_manager.cpu_player:IsResearchComplete( "support_cap_research" ) then
+				build_type.name = "support_cap_research"
+				self:TryBuild( build_type )
+			elseif not cpu_manager.cpu_player:IsResearchComplete( "support_cap_research_1" ) then
+				build_type.name = "support_cap_research_1"
+				self:TryBuild( build_type )
+			elseif not cpu_manager.cpu_player:IsResearchComplete( "support_cap_research_2" ) then
+				build_type.name = "support_cap_research_2"
+				self:TryBuild( build_type )
+			elseif not cpu_manager.cpu_player:IsResearchComplete( "support_cap_research_3" ) then
+				build_type.name = "support_cap_research_3"
+				self:TryBuild( build_type )
+			end
+		end
+	end
+
+	-- evaluate squad cap
+	if build_manager:GetSquadCapCurrentMax() < build_manager:GetSquadCapTotalMax() and
+		build_manager:GetSquadCapLeft() <= self.squad_cap_threshold then
+
+		local build_type = CpuBuildType()
+		build_type.btype = CpuPrerequisites.BT_Research
+		
+		if not cpu_manager.cpu_player:IsResearchComplete( "squad_cap_research" ) then
+			build_type.name = "squad_cap_research"
+			self:TryBuild( build_type )
+		elseif not cpu_manager.cpu_player:IsResearchComplete( "squad_cap_research_1" ) then
+			build_type.name = "squad_cap_research_1"
+			self:TryBuild( build_type )
+		end
+	end
+end
+
+
+function MarineBuildBaseStrategy:DoSecondaryBuildings()
+
+	local tierLevel = self:GetTierLevel()
+	if tierLevel >=2 then
+	
+		local num_vehicle_buildings = 0
+		local num_infantry_buildings = 0
+	
+		for build_channel in build_manager:GetBuildChannelAIs() do
+	
+			if build_channel:GetBlueprintID() == self.vehicle_building_id then
+				num_vehicle_buildings = num_vehicle_buildings + 1
+			end
+		
+			if build_channel:GetBlueprintID() == self.infantry_building_id then
+				num_infantry_buildings = num_infantry_buildings + 1
+			end
+		end
+
+		-- build secondary vehicles?
+		if	num_vehicle_buildings < 2 and
+			resource_manager:GetResourceAmount():Get( ResourceAmount.RT_Requisition ) > 1000 then
+
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Building
+			build_type.name = self.vehicle_building_name
+			self:TryBuild( build_type )
+
+		-- build secondary infantry after secondary vehicles
+		elseif num_barracks == 1 and
+			resource_manager:GetResourceAmount():Get( ResourceAmount.RT_Requisition ) > 1000 then
+
+			local build_type = CpuBuildType()
+			build_type.btype = CpuPrerequisites.BT_Building
+			build_type.name = self.infantry_building_name
+			self:TryBuild( build_type )
+		end
+	end
+end
+
+
+function MarineBuildBaseStrategy:DoResearch()
+
+	local tierLevel = self:GetTierLevel()
+
+	for i in MarineBuildBaseStrategy.ResearchOrder do 
+		
+		if not cpu_manager.cpu_player:IsResearchComplete( MarineBuildBaseStrategy.ResearchOrder[i][2] ) then
+		
+			if tierLevel > EldarBuildBaseStrategy.ResearchOrder[i][1] then
+				-- do not research this yet!
+				break
+
+			else
+			
+				local id = cpu_manager.stats:GetResearchID( MarineBuildBaseStrategy.ResearchOrder[i][2] )
+				if self:PlanExists( "Build Research Plan", id ) == false then 
+					aitrace( "wanting to do research" )
+					self.AddPlan( self, BuildResearchPlan( id ) )
+				end
+			
+				-- Only research 1 item at a time
+				break
+			end
+		end
+	end
+
+end
+
+
+function MarineBuildBaseStrategy:GetTierLevel()
+
+	local tierLevel = 1
+
+	local stats = cpu_manager.stats:GetPlayerStatsFromID( cpu_manager.player_id )
+	for base in stats:GetBases() do
+	
+		if base:HasAddOn( self.tier2_addon_id ) then
+			return 3
+		elseif base:HasAddOn( self.tier1_addon_id ) then
+			tierLevel = 2
+		end
+	end
+	
+	return tierLevel
+end
+
+
+function MarineBuildBaseStrategy:BuildStructureAddons()
+
+	local id = self.post_addon_id
+	if( self:PlanExists("Build AddOn Plan", id) == false ) then 
+		self.AddPlan( self, BuildAddOnPlan( id ) )
+	end
+end

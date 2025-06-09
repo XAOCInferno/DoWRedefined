@@ -1,0 +1,23 @@
+--EASY
+BuildOrderStrategyInfo = 
+{
+	space_marine_race =
+	{
+		{ "flag_capture" }
+	},
+	
+	ork_race = 
+	{
+		{ "flag_capture" }
+	},
+	
+	chaos_marine_race =
+	{
+		{ "flag_capture" }
+	},
+	
+	eldar_race =
+	{
+		{ "flag_capture" }
+	}
+}

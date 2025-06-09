@@ -1,0 +1,45 @@
+--EASY
+AttackStrategyInfo = 
+{
+
+	eldar_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -INT_MAX,
+		min_units = 1,
+
+		--percentage of opponents army to attak with
+		max_army_percentage = 0.3,
+	},
+	
+	chaos_marine_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -INT_MAX,
+		min_units = 1,
+
+		--percentage of opponents army to attak with
+		max_army_percentage = 0.3,
+	},
+	
+	ork_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -INT_MAX,
+		min_units = 1,
+
+		--percentage of opponents army to attak with
+		max_army_percentage = 0.3,
+	},
+	
+	space_marine_race =
+	{
+		--my prorate against yours before I stop attacking you and retreat
+		stop_attack_rating = -INT_MAX,
+		min_units = 1,
+		
+		--percentage of opponents army to attak with
+		max_army_percentage = 0.3,
+	},
+	
+}

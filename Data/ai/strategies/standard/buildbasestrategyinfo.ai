@@ -1,0 +1,101 @@
+--STANDARD
+BuildBaseStrategyInfo = 
+{
+	eldar_race =
+	{
+		no_research = true,
+		no_secondary_buildings = true,
+		no_alternate_objective = true,
+		max_army_percentage = 0.6,
+		
+		resource_capturers = 1,
+		engineer_count = 2,
+
+		attack_rating = -500,
+		max_army_size = 3000,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				eldar_squad_bonesinger = 0,
+			}
+		},
+	},
+	
+	chaos_marine_race =
+	{
+		no_research = true,
+		no_secondary_buildings = true,
+		no_alternate_objective = true,
+		max_army_percentage = 0.6,
+		
+		resource_capturers = 1,
+		engineer_count = 2,
+		
+		attack_rating = -500,
+		max_army_size = 3000,
+		
+		squad_cap_threshold = 3,
+		support_cap_threshold = 3,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				chaos_squad_slave = 0,
+				chaos_squad_cultist = 2,
+				chaos_squad_rhino = 0,
+			}
+		},
+	},
+
+	ork_race =
+	{
+		no_research = true,
+		no_secondary_buildings = true,
+		no_alternate_objective = true,
+		max_army_percentage = 0.6,
+	
+		resource_capturers = 1,
+		engineer_count = 2,
+
+		attack_rating = -500,
+		max_army_size = 3000,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				ork_squad_grot = 0,
+				ork_squad_warboss = 0,
+			}
+		},
+	},
+	
+	space_marine_race =
+	{
+		no_research = true,
+		no_secondary_buildings = true,
+		no_alternate_objective = true,
+		max_army_percentage = 0.6,
+	
+		resource_capturers = 1,
+		engineer_count = 2,
+		
+		attack_rating = -500,
+		max_army_size = 3000,
+		
+		SquadLimits = 
+		{
+			standard = 
+			{
+				space_marine_squad_servitor = 0,
+				space_marine_squad_land_raider = 0,
+				space_marine_squad_rhino = 0,
+				space_marine_squad_scout = 2,
+				space_marine_squad_skull_probe = 0,
+			}
+		},
+	}
+}

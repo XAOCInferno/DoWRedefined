@@ -1,0 +1,97 @@
+-------------------------------------------------------------------------
+-- Helper functions to cast abilities ----------------------------
+-------------------------------------------------------------------------
+
+Ability = 
+{
+
+--pass these filters into the functions below to figure out the target to do special ability on
+Filters = 
+{
+	CloseHurt = function( position, range, count )
+		return cpu_manager.cpu_player:FindFirstHurtSquad( position, range )
+	end,
+
+	CloseInCombat = function( position, range, count )
+		return cpu_manager.cpu_player:FindFirstSquadInCombat( position, range )
+	end,
+	
+	CloseEnemy = function( position, range, count )
+		return cpu_manager.cpu_player:FindFirstEnemy( position, range, count )
+	end,
+	
+	CloseVehicleEnemy = function( position, range, count )
+		return cpu_manager.cpu_player:FindFirstVehicleEnemy( position, range, count )
+	end,
+	
+	CloseInfantryEnemy = function( position, range, count )
+		return cpu_manager.cpu_player:FindFirstInfantryEnemy( position, range, count )
+	end,
+	
+	CloseCommanderEnemy = function( position, range, count )
+		return cpu_manager.cpu_player:FindFirstCommanderEnemy( position, range, count )
+	end,
+	
+	IsInCombat = function( squad_ai )
+		return squad_ai:IsInCombat()
+	end,
+},
+
+
+DoAbility = function( squad_ai, id, functor )
+
+	dbAssert( functor ~= nil )
+
+	if squad_ai:CanDoAbility( id ) and functor( squad_ai ) then
+		squad_ai:DoSpecialAbility( id ) 
+	end
+end,
+
+
+DoAbilityPos = function( squad_ai, id, functor, enemy_count )
+
+	dbAssert( functor ~= nil )
+	
+	if enemy_count == nil then
+		enemy_count = 1 
+	end
+	
+	if squad_ai:CanDoAbility( id ) then
+			
+		local range = squad_ai:GetAbilityRange( id )
+		
+		--look for a target
+		local target = nil
+		
+		target = functor( squad_ai:GetPosition(), range, enemy_count )
+		
+		if target ~= nil then
+			squad_ai:DoSpecialAbilityPos( id, target:GetPosition() )
+		end
+		
+	end
+	
+end,
+
+
+DoAbilityTarget = function( squad_ai, id, functor, enemy_count )
+
+	dbAssert( functor ~= nil )
+	
+	if enemy_count == nil then
+		enemy_count = 1 
+	end
+	
+	if squad_ai:CanDoAbility( id ) then
+		local range = squad_ai:GetAbilityRange( id )
+
+		local target = nil
+		target = functor( squad_ai:GetPosition(), range, enemy_count )
+		
+		if target ~= nil then
+			squad_ai:DoSpecialAbilitySquad( id, target:GetSquad() )
+		end
+	end
+end,
+
+}

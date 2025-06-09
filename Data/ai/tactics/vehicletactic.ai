@@ -1,0 +1,90 @@
+class 'VehicleTactic' (Tactic)
+
+function VehicleTactic:__init( squad_ai ) super( squad_ai )
+
+	Tactic.AssignStateFunction( self, Tactic.States.Hold, VehicleTactic.BeginHoldState )
+	Tactic.AssignStateFunction( self, Tactic.States.Retreat, VehicleTactic.BeginRetreatState )
+	Tactic.AssignStateFunction( self, Tactic.States.Attack, VehicleTactic.BeginAttackState )
+	
+	self.safe_tolerance = 100 
+	
+end
+
+
+function VehicleTactic:GetName()
+	return "Vehicle Tactic"
+end
+
+
+function VehicleTactic:BeginHoldState()
+
+	if( self.target == nil ) then
+		return
+	end
+
+	if( self.variant_type == Tactic.Variant.Vector ) then
+		self.squad_ai:DoAttackMove( self.target )
+	end
+	
+	Tactic.SetSubState( self, VehicleTactic.HoldState, "Holding" )
+end
+
+
+function VehicleTactic:BeginRetreatState()
+
+	dbAssert( self.target ~= nil )
+	
+	if( self.variant_type == Tactic.Variant.Vector ) then
+		self.squad_ai:DoMove( self.target )
+	end
+	
+	Tactic.SetSubState( self, VehicleTactic.HoldState, "Holding" )
+end
+
+
+function VehicleTactic:HoldState()
+
+	if( self.target == nil ) then
+		return
+	end
+end
+
+
+function VehicleTactic:BeginAttackState()
+	
+	if( self.target == nil ) then
+		return
+	end
+
+	if( self.variant_type == Tactic.Variant.Vector ) then
+		self.squad_ai:DoAttackMove( self.target )
+	end
+	
+	Tactic.SetSubState( self, VehicleTactic.AttackingState, "Attacking" )
+end
+
+
+function VehicleTactic:AttackingState()
+
+	--if I'm idle, restart
+	if self.squad_ai:IsIdle() then		
+		Tactic.SetState( self, self:GetState() )
+	end
+end
+
+
+function VehicleTactic:Update()
+
+	-- state machine
+	if not Tactic.Update( self ) then
+		return false
+	end
+
+	if self.squad_ai:HasUpgradableTrooper() then
+		local class_type = cpu_manager:GetFirstEnemyPlayer():GetMajorityClassType()
+		self.squad_ai:DoBestUpgrade( class_type )
+	end
+	
+	self:UpdateStance()
+	return true
+end

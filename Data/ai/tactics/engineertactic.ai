@@ -1,0 +1,122 @@
+class 'EngineerTactic' (InfantryTactic)
+
+function EngineerTactic:__init( squad_ai ) super( squad_ai )
+
+	self.tagged_flag = nil
+
+	-- should we hold this engineer back?
+	--[[
+	if Tactic.Engineers.num_currrently_resourcing < Tactic.Engineers.num_reserved_for_resourcing then
+		self.go_to_post = true
+		Tactic.Engineers.num_currrently_resourcing = Tactic.Engineers.num_currrently_resourcing + 1
+	else
+		self.go_to_post = false
+	end
+	]]
+
+	self.go_to_post = false
+
+end
+
+
+function EngineerTactic:GetName()
+	return "Engineer Tactic"
+end
+
+
+function EngineerTactic:IsAttacker()
+	return false
+end
+
+
+function EngineerTactic:IsDefender()
+	return false
+end
+
+
+function EngineerTactic:Update()
+
+	if self.go_to_post == true then
+		Tactic.Engineers.num_currrently_resourcing = Tactic.Engineers.num_currrently_resourcing + 1
+	end
+	
+	Tactic.Engineers.total_engineer_count = Tactic.Engineers.total_engineer_count + 1
+
+	-- state machine
+	if not InfantryTactic.Update( self ) then
+		return false
+	end
+	
+	if self.tagged_flag == nil and not self.squad_ai:IsLocked() and not self.squad_ai:IsInStateMove() then
+		self:GoToNextPost()
+	end
+	
+	-- locked, so don't stay close to the flag
+	if self.squad_ai:IsLocked() and self.tagged_flag ~= nil then
+		--release the flag
+		self.tagged_flag:TagFlagForEngineer( false )
+		self.tagged_flag = nil
+	end
+	
+	return true
+end
+
+
+function EngineerTactic:IsAffectedByMorale()
+
+	return self.squad_ai:IsBuilding() == 0
+end
+
+
+function EngineerTactic:GoToNextPost()
+
+	local best_point = nil
+	local best_distance = -1
+	local from_pos = self.squad_ai:GetPosition()
+
+	if self.go_to_post == true then
+
+		-- find the closest flag that can be build on
+		for strat_ai in resource_manager:GetStrategicPointAIs() do
+
+			--we're the owner, but no post
+			if strat_ai:IsLocked() and not strat_ai:HasListeningPost() and not strat_ai:IsTagged() and not strat_ai:IsStrategicObjective() then
+
+				if not cpu_manager.terrain_analyzer:HasThreat( strat_ai:GetPosition(), 15 ) then
+
+					if best_point == nil then
+						best_point = strat_ai
+						best_distance = cpu_manager.terrain_analyzer:GetPathingDistance( strat_ai:GetPosition(), from_pos )
+					else
+						local cur_distance = cpu_manager.terrain_analyzer:GetPathingDistance( strat_ai:GetPosition(), from_pos )
+						if cur_distance < best_distance then
+
+							best_point = strat_ai
+							best_distance = cur_distance
+						end
+					end
+				end
+			end
+		end
+	end
+
+	-- use this SP
+	self.tagged_flag = best_point
+
+	if self.tagged_flag ~= nil then
+		aitrace("moving to next strategic point")
+		self.tagged_flag:TagFlagForEngineer( true )
+		self.squad_ai:DoMove( self.tagged_flag:GetEntity():GetPosition() )
+	else
+
+		aitrace("returning to a home base")
+		local base = cpu_manager:FindClosestBase( self.squad_ai:GetPosition(), true, false, true )
+		if base ~= nil then
+
+				local base_distance = cpu_manager.terrain_analyzer:GetPathingDistance( base:GetPosition(), from_pos )
+				if base_distance > 10 then
+					self.squad_ai:DoMove( base:GetPosition() )
+			end
+		end
+	end
+end

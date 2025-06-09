@@ -1,0 +1,57 @@
+class 'HealerTactic' (InfantryTactic)
+
+HealerTactic.TargetAbilities = 
+{
+	{ nil, "ork_fightin_juice", 	Ability.Filters.CloseHurt, 1 },
+}
+
+
+function HealerTactic:__init( squad_ai ) super( squad_ai )
+
+	if HealerTactic.TargetAbilities[1][1] == nil then
+		for i in HealerTactic.TargetAbilities do
+			local ability_id = cpu_manager.stats:GetAbilityID( HealerTactic.TargetAbilities[i][2] )
+			HealerTactic.TargetAbilities[i][1] = ability_id
+		end
+	end
+end
+
+
+function HealerTactic:GetName()
+	return "Healer Tactic"
+end
+
+
+function HealerTactic:DoAbilities()
+
+	for i in HealerTactic.TargetAbilities do
+
+		local ability_id = HealerTactic.TargetAbilities[i][1]
+		if ability_id ~= nil then
+
+			local filter = HealerTactic.TargetAbilities[i][3]
+			local squad_count = HealerTactic.TargetAbilities[i][4]
+			Ability.DoAbilityTarget( self.squad_ai, ability_id, filter, squad_count ) 
+		end
+	end
+end
+
+
+function HealerTactic:Update()
+
+	if not InfantryTactic.Update( self ) then
+		return
+	end
+
+	-- find hurt squads
+	if self.squad_ai:IsInCombat() then
+		local hurt_filter = function( squad_ai )
+			return self.squad_ai:CanAttachTo( squad_ai ) and squad_ai:GetHealthPercentage() <= 0.75
+		end
+		
+		local attach_to = cpu_manager:GetClosestSquad( self.squad_ai:GetPosition(), 40, hurt_filter );
+		if attach_to ~= nil then
+			self.squad_ai:DoAttachSquad( attach_to )
+		end
+	end
+end
