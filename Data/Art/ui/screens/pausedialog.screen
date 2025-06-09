@@ -1,0 +1,2750 @@
+Screen =  
+{
+	TooltipWidgets =  
+	{
+		type = "Group",
+		name = "grp_tooltips",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				type = "TextLabel",
+				style =  
+				{
+					"UIStyles",
+					"_Tooltip",
+				},
+				position =  
+				{
+					0.01027,
+					0.96220,
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				text = "",
+				name = "tooltip",
+				size =  
+				{
+					0.97947,
+					0.03005,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+	version = 4,
+	Widgets =  
+	{
+		type = "Group",
+		name = "grp_Screen",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				type = "Group",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "grpBackground",
+				position =  
+				{
+					0,
+					0,
+				},
+				Children =  
+				{
+					 
+					{
+						type = "Group",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						name = "bgShadow",
+						position =  
+						{
+							0,
+							0,
+						},
+						Children =  
+						{
+							 
+							{
+								type = "Group",
+								HitArea =  
+								{
+									 
+									{
+										type = "Rectangle",
+										size =  
+										{
+											1,
+											1,
+										},
+										position =  
+										{
+											0,
+											0,
+										},
+									},
+								},
+								name = "grpPauseMenu",
+								position =  
+								{
+									0.30792,
+									0.27506,
+								},
+								Children =  
+								{
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11013",
+										text = "$11000",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnExit",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.39204,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 267990,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 267991,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 267992,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 267993,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 267994,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 267995,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 267996,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 267997,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 267998,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 267999,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "menu_back_button",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11012",
+										text = "$11007",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnQuit",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.33869,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 268000,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 268001,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 268002,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 268003,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 268004,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 268005,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268006,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268007,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 268008,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 268009,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "menu_back_button",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11011",
+										text = "$11006",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnGameOptions",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.28534,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 268010,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 268011,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 268012,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 268013,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 268014,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 268015,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268016,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268017,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 268018,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 268019,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "button_menu",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11010",
+										text = "$11004",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnRestart",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.23199,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 268020,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 268021,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 268022,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 268023,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 268024,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 268025,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268026,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268027,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 268028,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 268029,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "button_menu",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11009",
+										text = "$11003",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnLoad",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.17864,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 268030,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 268031,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 268032,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 268033,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 268034,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 268035,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268036,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268037,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 268038,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 268039,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "button_menu",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11008",
+										text = "$11002",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnSave",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.12529,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 268040,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 268041,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 268042,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 268043,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 268044,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 268045,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268046,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268047,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 268048,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 268049,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "button_menu",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+									 
+									{
+										type = "Button",
+										tooltip_text = "$11005",
+										text = "$11001",
+										HitArea =  
+										{
+											 
+											{
+												type = "Rectangle",
+												size =  
+												{
+													1,
+													1,
+												},
+												position =  
+												{
+													0,
+													0,
+												},
+											},
+										},
+										name = "btnResume",
+										tooltip_name = "tooltip",
+										position =  
+										{
+											0.04387,
+											0.07194,
+										},
+										style =  
+										{
+											"UIStyles",
+											"btn_MainMenu_16pt",
+										},
+										Presentation =  
+										{
+											Art =  
+											{
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15768,
+														0.15082,
+													},
+													ID = 268050,
+													size =  
+													{
+														0.11277,
+														0.69133,
+													},
+													texture = "art/ui/textures/btn_ornate_detail.tga",
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.15800,
+														0.15100,
+													},
+													ID = 268051,
+													size =  
+													{
+														0.11300,
+														0.69100,
+													},
+													texture = "art/ui/textures/btn_ornate_detail_disabled.tga",
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11900,
+														0.32500,
+													},
+													ID = 268052,
+													colour =  
+													{
+														38,
+														38,
+														38,
+														74,
+													},
+													size =  
+													{
+														0.76192,
+														0.32900,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11909,
+														0.32458,
+													},
+													ID = 268053,
+													colour =  
+													{
+														0,
+														0,
+														0,
+														36,
+													},
+													size =  
+													{
+														0.76181,
+														0.32921,
+													},
+													states =  
+													{
+														"Normal",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Rectangle",
+													position =  
+													{
+														0.11902,
+														0.32458,
+													},
+													ID = 268054,
+													colour =  
+													{
+														167,
+														18,
+														18,
+														146,
+													},
+													size =  
+													{
+														0.76196,
+														0.32921,
+													},
+													states =  
+													{
+														"Active",
+													},
+												},
+												 
+												{
+													type = "Line",
+													colour =  
+													{
+														42,
+														42,
+														42,
+														61,
+													},
+													ID = 268055,
+													p2 =  
+													{
+														0.93917,
+														0.47539,
+													},
+													p1 =  
+													{
+														0.06083,
+														0.47539,
+													},
+													states =  
+													{
+														"Normal",
+														"Active",
+														"Hover",
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Text",
+													fontname = "albertus extra bold16",
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268056,
+													textColourTop =  
+													{
+														0,
+														0,
+														0,
+														202,
+													},
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													states =  
+													{
+														"Normal",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														255,
+														255,
+														255,
+														208,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														255,
+														255,
+														255,
+														225,
+													},
+													position =  
+													{
+														0.21144,
+														0,
+													},
+													ID = 268057,
+													size =  
+													{
+														0.78592,
+														1,
+													},
+													dropShadow = true,
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+												 
+												{
+													type = "Text",
+													textColourBottom =  
+													{
+														57,
+														57,
+														57,
+														121,
+													},
+													fontname = "albertus extra bold16",
+													textColourTop =  
+													{
+														25,
+														25,
+														25,
+														150,
+													},
+													position =  
+													{
+														0.21100,
+														0,
+													},
+													ID = 268058,
+													size =  
+													{
+														0.78600,
+														1,
+													},
+													states =  
+													{
+														"Disabled",
+													},
+												},
+												 
+												{
+													type = "Graphic",
+													position =  
+													{
+														0.07316,
+														0,
+													},
+													ID = 268059,
+													size =  
+													{
+														0.85367,
+														0.97219,
+													},
+													texture = "art/ui/textures/btn_mainmenu_hover.tga",
+													states =  
+													{
+														"Active",
+														"Hover",
+													},
+												},
+											},
+											Sound =  
+											{
+												 
+												{
+													sample = "cursor_over_menu",
+													event = "OnHover",
+												},
+												 
+												{
+													sample = "button_menu",
+													event = "OnClick",
+												},
+											},
+										},
+										size =  
+										{
+											0.29057,
+											0.06027,
+										},
+									},
+								},
+								style =  
+								{
+									"DefaultStyles",
+									"defStyleGroup",
+								},
+								Presentation =  
+								{
+									Art =  
+									{
+										 
+										{
+											type = "Graphic",
+											ID = 8469,
+											texture = "generic:art/ui/textures/bg_popup_small.tga",
+											states =  
+											{
+												"Normal",
+												"Disabled",
+												"Active",
+												"Hover",
+											},
+										},
+									},
+								},
+								size =  
+								{
+									0.38417,
+									0.46905,
+								},
+							},
+						},
+						style =  
+						{
+							"DefaultStyles",
+							"defStyleGroup",
+						},
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									ID = 24464,
+									texture = "art/ui/textures/bg_shadow.tga",
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+								 
+								{
+									type = "Rectangle",
+									position =  
+									{
+										0,
+										0.95703,
+									},
+									ID = 198243,
+									size =  
+									{
+										1,
+										0.04297,
+									},
+									states =  
+									{
+										"Normal",
+										"Active",
+										"Hover",
+										"Disabled",
+									},
+								},
+							},
+						},
+						size =  
+						{
+							1,
+							1,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				Presentation =  
+				{
+				},
+				size =  
+				{
+					1,
+					1,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+}
+ToolInfo =  
+{
+	version = 3,
+	WidgetInfo =  
+	{
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_Screen",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grpBackground",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+				 
+				{
+					horizontal = false,
+					position = 0.95703,
+				},
+			},
+			name = "bgShadow",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grpPauseMenu",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnExit",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnQuit",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnGameOptions",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnRestart",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnLoad",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnSave",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnResume",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_tooltips",
+			HitAreaGuides =  
+			{
+			},
+			type = "",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "tooltip",
+			HitAreaGuides =  
+			{
+			},
+			type = "TextLabel",
+		},
+	},
+	Guides =  
+	{
+	},
+	ScreenInfo =  
+	{
+		LocaleRange =  
+		{
+			11000,
+			11499,
+		},
+	},
+}

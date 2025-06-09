@@ -1,0 +1,1789 @@
+Screen =  
+{
+	TooltipWidgets =  
+	{
+		type = "Group",
+		name = "grp_tooltips",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+	version = 4,
+	Widgets =  
+	{
+		type = "Group",
+		name = "grp_screen",
+		position =  
+		{
+			0,
+			0,
+		},
+		HitArea =  
+		{
+			 
+			{
+				type = "Rectangle",
+				size =  
+				{
+					1,
+					1,
+				},
+				position =  
+				{
+					0,
+					0,
+				},
+			},
+		},
+		Children =  
+		{
+			 
+			{
+				type = "Group",
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "grpButtons",
+				position =  
+				{
+					0.19337,
+					0.61102,
+				},
+				Children =  
+				{
+					 
+					{
+						type = "Button",
+						buttonType = "ClickOnRelease",
+						text = "$21500",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"UIStyles",
+							"menu_Button_1",
+						},
+						position =  
+						{
+							0.01674,
+							0.00167,
+						},
+						name = "btn1",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										0.05516,
+										0.12175,
+									},
+									ID = 174886,
+									size =  
+									{
+										0.88968,
+										0.72436,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Normal",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										221,
+										46,
+										46,
+										255,
+									},
+									position =  
+									{
+										0.05059,
+										0.12000,
+									},
+									ID = 174887,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										150,
+										51,
+										51,
+										255,
+									},
+									position =  
+									{
+										0.04710,
+										0.11538,
+									},
+									ID = 174888,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										0,
+										0,
+										0,
+										193,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										84,
+										84,
+										84,
+										150,
+									},
+									position =  
+									{
+										-0.01177,
+										0,
+									},
+									ID = 174889,
+									horzAlign = "Centre",
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										242,
+										242,
+										242,
+										182,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										197,
+									},
+									vertAlign = "Top",
+									horzAlign = "Centre",
+									position =  
+									{
+										-0.00871,
+										0.23069,
+									},
+									ID = 174890,
+									size =  
+									{
+										0.79146,
+										0.69231,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "cursor_over_small_button",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "small_button_menu",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.09902,
+							0.02711,
+						},
+					},
+					 
+					{
+						type = "Button",
+						buttonType = "ClickOnRelease",
+						text = "$21501",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"UIStyles",
+							"menu_Button_1",
+						},
+						position =  
+						{
+							0.12667,
+							0.00063,
+						},
+						name = "btn2",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										0.05516,
+										0.12175,
+									},
+									ID = 174891,
+									size =  
+									{
+										0.88968,
+										0.72436,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Normal",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										221,
+										46,
+										46,
+										255,
+									},
+									position =  
+									{
+										0.05059,
+										0.12000,
+									},
+									ID = 174892,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										150,
+										51,
+										51,
+										255,
+									},
+									position =  
+									{
+										0.04710,
+										0.11538,
+									},
+									ID = 174893,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										0,
+										0,
+										0,
+										193,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										84,
+										84,
+										84,
+										150,
+									},
+									position =  
+									{
+										-0.01177,
+										0,
+									},
+									ID = 174894,
+									horzAlign = "Centre",
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										242,
+										242,
+										242,
+										182,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										197,
+									},
+									vertAlign = "Top",
+									horzAlign = "Centre",
+									position =  
+									{
+										-0.00871,
+										0.23069,
+									},
+									ID = 174895,
+									size =  
+									{
+										0.79146,
+										0.69231,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "cursor_over_small_button",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "small_button_menu",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.08298,
+							0.02711,
+						},
+					},
+					 
+					{
+						type = "Button",
+						buttonType = "ClickOnRelease",
+						text = "$21502",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"UIStyles",
+							"menu_Button_1",
+						},
+						position =  
+						{
+							0.21732,
+							0.00063,
+						},
+						name = "btn3",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										0.05516,
+										0.12175,
+									},
+									ID = 174896,
+									size =  
+									{
+										0.88968,
+										0.72436,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Normal",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										221,
+										46,
+										46,
+										255,
+									},
+									position =  
+									{
+										0.05059,
+										0.12000,
+									},
+									ID = 174897,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										150,
+										51,
+										51,
+										255,
+									},
+									position =  
+									{
+										0.04710,
+										0.11538,
+									},
+									ID = 174898,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										0,
+										0,
+										0,
+										193,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										84,
+										84,
+										84,
+										150,
+									},
+									position =  
+									{
+										-0.01177,
+										0,
+									},
+									ID = 174899,
+									horzAlign = "Centre",
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										242,
+										242,
+										242,
+										182,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										197,
+									},
+									vertAlign = "Top",
+									horzAlign = "Centre",
+									position =  
+									{
+										-0.00871,
+										0.23069,
+									},
+									ID = 174900,
+									size =  
+									{
+										0.79146,
+										0.69231,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "cursor_over_small_button",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "small_button_menu",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.08298,
+							0.02711,
+						},
+					},
+					 
+					{
+						type = "Button",
+						buttonType = "ClickOnRelease",
+						text = "$21505",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"UIStyles",
+							"menu_Button_1",
+						},
+						position =  
+						{
+							0.50427,
+							0.00063,
+						},
+						name = "btn6",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										0.05516,
+										0.12175,
+									},
+									ID = 174901,
+									size =  
+									{
+										0.88968,
+										0.72436,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Normal",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										221,
+										46,
+										46,
+										255,
+									},
+									position =  
+									{
+										0.05059,
+										0.12000,
+									},
+									ID = 174902,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										150,
+										51,
+										51,
+										255,
+									},
+									position =  
+									{
+										0.04710,
+										0.11538,
+									},
+									ID = 174903,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										0,
+										0,
+										0,
+										193,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										84,
+										84,
+										84,
+										150,
+									},
+									position =  
+									{
+										-0.01177,
+										0,
+									},
+									ID = 174904,
+									horzAlign = "Centre",
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										242,
+										242,
+										242,
+										182,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										197,
+									},
+									vertAlign = "Top",
+									horzAlign = "Centre",
+									position =  
+									{
+										-0.00871,
+										0.23069,
+									},
+									ID = 174905,
+									size =  
+									{
+										0.79146,
+										0.69231,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "cursor_over_small_button",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "small_button_menu",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.08298,
+							0.02711,
+						},
+					},
+					 
+					{
+						type = "Button",
+						buttonType = "ClickOnRelease",
+						text = "$21504",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"UIStyles",
+							"menu_Button_1",
+						},
+						position =  
+						{
+							0.40862,
+							0.00063,
+						},
+						name = "btn5",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										0.05516,
+										0.12175,
+									},
+									ID = 174906,
+									size =  
+									{
+										0.88968,
+										0.72436,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Normal",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										221,
+										46,
+										46,
+										255,
+									},
+									position =  
+									{
+										0.05059,
+										0.12000,
+									},
+									ID = 174907,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										150,
+										51,
+										51,
+										255,
+									},
+									position =  
+									{
+										0.04710,
+										0.11538,
+									},
+									ID = 174908,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										0,
+										0,
+										0,
+										193,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										84,
+										84,
+										84,
+										150,
+									},
+									position =  
+									{
+										-0.01177,
+										0,
+									},
+									ID = 174909,
+									horzAlign = "Centre",
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										242,
+										242,
+										242,
+										182,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										197,
+									},
+									vertAlign = "Top",
+									horzAlign = "Centre",
+									position =  
+									{
+										-0.00871,
+										0.23069,
+									},
+									ID = 174910,
+									size =  
+									{
+										0.79146,
+										0.69231,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "cursor_over_small_button",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "small_button_menu",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.08298,
+							0.02711,
+						},
+					},
+					 
+					{
+						type = "Button",
+						buttonType = "ClickOnRelease",
+						text = "$21503",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						style =  
+						{
+							"UIStyles",
+							"menu_Button_1",
+						},
+						position =  
+						{
+							0.31297,
+							0.00063,
+						},
+						name = "btn4",
+						Presentation =  
+						{
+							Art =  
+							{
+								 
+								{
+									type = "Graphic",
+									position =  
+									{
+										0.05516,
+										0.12175,
+									},
+									ID = 174911,
+									size =  
+									{
+										0.88968,
+										0.72436,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Normal",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										221,
+										46,
+										46,
+										255,
+									},
+									position =  
+									{
+										0.05059,
+										0.12000,
+									},
+									ID = 174912,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Graphic",
+									colour =  
+									{
+										150,
+										51,
+										51,
+										255,
+									},
+									position =  
+									{
+										0.04710,
+										0.11538,
+									},
+									ID = 174913,
+									size =  
+									{
+										0.89000,
+										0.72000,
+									},
+									texture = "art/ui/textures/taskbar/taskbar_share/menu_button_1.tga",
+									states =  
+									{
+										"Active",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										0,
+										0,
+										0,
+										193,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										84,
+										84,
+										84,
+										150,
+									},
+									position =  
+									{
+										-0.01177,
+										0,
+									},
+									ID = 174914,
+									horzAlign = "Centre",
+									states =  
+									{
+										"Normal",
+										"Disabled",
+										"Active",
+										"Hover",
+									},
+								},
+								 
+								{
+									type = "Text",
+									textColourBottom =  
+									{
+										242,
+										242,
+										242,
+										182,
+									},
+									fontname = "gillsans_11",
+									textColourTop =  
+									{
+										255,
+										255,
+										255,
+										197,
+									},
+									vertAlign = "Top",
+									horzAlign = "Centre",
+									position =  
+									{
+										-0.00871,
+										0.23069,
+									},
+									ID = 174915,
+									size =  
+									{
+										0.79146,
+										0.69231,
+									},
+									dropShadow = true,
+									states =  
+									{
+										"Active",
+										"Hover",
+									},
+								},
+							},
+							Sound =  
+							{
+								 
+								{
+									sample = "cursor_over_small_button",
+									event = "OnHover",
+								},
+								 
+								{
+									sample = "small_button_menu",
+									event = "OnClick",
+								},
+							},
+						},
+						size =  
+						{
+							0.08298,
+							0.02711,
+						},
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleGroup",
+				},
+				Presentation =  
+				{
+				},
+				size =  
+				{
+					0.61327,
+					0.02838,
+				},
+			},
+			 
+			{
+				type = "CustomListBox",
+				ItemTemplate =  
+				{
+					type = "CustomListBoxItem",
+					name = "itemTmplt_lstBoxQuickChat",
+					position =  
+					{
+						0,
+						0,
+					},
+					HitArea =  
+					{
+						 
+						{
+							type = "Rectangle",
+							size =  
+							{
+								1,
+								1,
+							},
+							position =  
+							{
+								0,
+								0,
+							},
+						},
+					},
+					size =  
+					{
+						0.65269,
+						0.02500,
+					},
+				},
+				HitArea =  
+				{
+					 
+					{
+						type = "Rectangle",
+						size =  
+						{
+							1,
+							1,
+						},
+						position =  
+						{
+							0,
+							0,
+						},
+					},
+				},
+				name = "lstBoxQuickChat",
+				position =  
+				{
+					0.34731,
+					0.22871,
+				},
+				ScrollBar =  
+				{
+					visible = false,
+					type = "ScrollBar",
+					range =  
+					{
+						0,
+						0,
+					},
+					ButtonDecrement =  
+					{
+						type = "Button",
+						name = "btnDec_scrlBar_lstBoxQuickChat",
+						position =  
+						{
+							0,
+							0,
+						},
+						buttonType = "ClickOnPress",
+						text = "",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						size =  
+						{
+							0,
+							0,
+						},
+					},
+					HitArea =  
+					{
+						 
+						{
+							type = "Rectangle",
+							size =  
+							{
+								1,
+								1,
+							},
+							position =  
+							{
+								0,
+								0,
+							},
+						},
+					},
+					name = "scrlBar_lstBoxQuickChat",
+					position =  
+					{
+						0,
+						0,
+					},
+					stepSize = 0,
+					ButtonTrack =  
+					{
+						type = "Button",
+						name = "btnTrk_scrlBar_lstBoxQuickChat",
+						position =  
+						{
+							0,
+							0,
+						},
+						text = "",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						size =  
+						{
+							0.02500,
+							0.17500,
+						},
+					},
+					ButtonIncrement =  
+					{
+						type = "Button",
+						name = "btnInc_scrlBar_lstBoxQuickChat",
+						position =  
+						{
+							0,
+							0.17500,
+						},
+						buttonType = "ClickOnPress",
+						text = "",
+						HitArea =  
+						{
+							 
+							{
+								type = "Rectangle",
+								size =  
+								{
+									1,
+									1,
+								},
+								position =  
+								{
+									0,
+									0,
+								},
+							},
+						},
+						size =  
+						{
+							0.02500,
+							0.02500,
+						},
+					},
+					size =  
+					{
+						0,
+						0.35559,
+					},
+				},
+				ItemsGroup =  
+				{
+					type = "Group",
+					name = "items_lstBoxQuickChat",
+					position =  
+					{
+						0,
+						0,
+					},
+					HitArea =  
+					{
+						 
+						{
+							type = "Rectangle",
+							size =  
+							{
+								1,
+								1,
+							},
+							position =  
+							{
+								0,
+								0,
+							},
+						},
+					},
+					size =  
+					{
+						0.65269,
+						0.35559,
+					},
+				},
+				style =  
+				{
+					"DefaultStyles",
+					"defStyleCustomListBox",
+				},
+				size =  
+				{
+					0.30538,
+					0.35559,
+				},
+			},
+		},
+		size =  
+		{
+			1,
+			1,
+		},
+	},
+}
+ToolInfo =  
+{
+	version = 3,
+	WidgetInfo =  
+	{
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_screen",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grpButtons",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn1",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn2",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn3",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn6",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn5",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btn4",
+			HitAreaGuides =  
+			{
+			},
+			type = "Button",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "CustomListBox",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "items_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "scrlBar_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnDec_scrlBar_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnInc_scrlBar_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnTrk_scrlBar_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgDn_scrlBar_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "btnPgUp_scrlBar_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "itemTmplt_lstBoxQuickChat",
+			HitAreaGuides =  
+			{
+			},
+			type = "Component",
+		},
+		 
+		{
+			ArtGuides =  
+			{
+			},
+			name = "grp_tooltips",
+			HitAreaGuides =  
+			{
+			},
+			type = "Group",
+		},
+	},
+	Guides =  
+	{
+	},
+	ScreenInfo =  
+	{
+		LocaleRange =  
+		{
+			21500,
+			21999,
+		},
+	},
+}
